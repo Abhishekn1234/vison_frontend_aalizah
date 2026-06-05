@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Plus, Minus, ArrowUp } from 'lucide-react';
+import { Plus, Minus} from 'lucide-react';
 import FadeIn from '../common/FadeIn';
-import Button from '../common/Button';
+
 
 export default function FaqContent() {
   // Track open state for accordions using indices like "category-index"
