@@ -20,19 +20,19 @@ export default function HeroBanner() {
       <div className="relative z-10 h-full flex flex-col items-center justify-center px-4">
 
         <h1
-          className="
-            text-white
-            uppercase
-            font-black
-            tracking-tight
-            text-5xl
-            md:text-7xl
-            lg:text-[110px]
-            leading-none
-          "
-        >
-          About
-        </h1>
+    className="
+      text-white
+      uppercase
+      font-black
+      tracking-tight
+      text-5xl
+      md:text-7xl
+      lg:text-[110px]
+      leading-none
+    "
+  >
+    About
+  </h1>
 
         {/* Breadcrumb Box */}
         <div

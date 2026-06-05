@@ -1,5 +1,6 @@
-import { Check, ArrowRight } from "lucide-react";
+import { Check, } from "lucide-react";
 import FadeIn from "../common/FadeIn";
+import AboutButton from "./AboutButton";
 
 const points = [
   "Experienced and Skilled Professionals",
@@ -10,7 +11,7 @@ const points = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-[#f1efea] py-16 md:py-24 lg:py-32 mb-20">
+    <section className="relative overflow-hidden bg-[#f1efea] py-16 md:py-24 lg:py-32 mb-0 font-sans">
       <FadeIn>
         {/* Top White Curved/Slanted Shape */}
       <div className="absolute top-0 left-0 w-full h-[70px] md:h-[110px] lg:h-[140px] z-0 pointer-events-none">
@@ -75,10 +76,10 @@ export default function WhyChooseUs() {
               professionalism.
             </p>
 
-            <button className="mt-10 bg-white text-black px-8 md:px-10 py-5 rounded-2xl font-bold uppercase flex items-center gap-3 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              View Our Projects
-              <ArrowRight size={22} className="text-[#2BC77A]" />
-            </button>
+            <AboutButton className="mt-12" variant="none">
+              VIEW OUR PROJECTS
+             
+            </AboutButton>
           </div>
 
           {/* Right Side */}
