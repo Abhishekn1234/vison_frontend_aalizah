@@ -14,7 +14,7 @@ const StatItem: React.FC<StatItemProps> = ({ icon, labelTag, number, suffix, des
     <div className="flex flex-col w-full font-sans">
       {/* Top Header Row: Icon and Small Tag right-aligned */}
       <div className="flex items-end justify-between pb-3 border-b border-gray-200">
-        <div className="text-emerald-500 w-12 h-12 flex items-center justify-start">
+        <div className="text-[#800000]  w-12 h-12 flex items-center justify-start">
           {icon}
         </div>
         <span className="text-[11px] font-bold text-gray-400 tracking-[0.25em] uppercase select-none">
@@ -27,7 +27,7 @@ const StatItem: React.FC<StatItemProps> = ({ icon, labelTag, number, suffix, des
         <h2 className="text-[64px] sm:text-[72px] font-black text-black leading-none tracking-tight">
           {number}
         </h2>
-        <span className="text-[32px] sm:text-[38px] font-extrabold text-[#1EA665] ml-1 select-none self-start pt-1">
+        <span className="text-[32px] sm:text-[38px] font-extrabold text-[#800000]  ml-1 select-none self-start pt-1">
           {suffix}
         </span>
       </div>
