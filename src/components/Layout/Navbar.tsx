@@ -75,7 +75,7 @@ export default function Navbar() {
                 </Link>
 
                 <Link to="/team" className="block px-5 py-4 hover:bg-gray-100">
-                  Team
+                  Join Our Team
                 </Link>
 
                 <Link to="/faq" className="block px-5 py-4 hover:bg-gray-100">
@@ -145,7 +145,7 @@ export default function Navbar() {
                   className="block p-4"
                   onClick={() => setOpen(false)}
                 >
-                  Team
+                  Join Our Team
                 </Link>
 
                 <Link

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import FadeIn from '../common/FadeIn';
 
 interface StatItemProps {
@@ -9,37 +9,88 @@ interface StatItemProps {
   description: string;
 }
 
-const StatItem: React.FC<StatItemProps> = ({ icon, labelTag, number, suffix, description }) => {
+const StatItem: React.FC<StatItemProps> = ({
+  icon,
+  labelTag,
+  number,
+  suffix,
+  description,
+}) => {
+  const [count, setCount] = useState(0);
+  const [start, setStart] = useState(false);
+
+  const target = parseInt(number);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStart(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    const el = document.getElementById(`stat-${labelTag}`);
+    if (el) observer.observe(el);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!start) return;
+
+    let current = 0;
+    const duration = 1200;
+    const stepTime = Math.max(10, Math.floor(duration / target));
+
+    const timer = setInterval(() => {
+      current += 1;
+      setCount(current);
+
+      if (current >= target) {
+        clearInterval(timer);
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [start, target]);
+
   return (
-    <div className="flex flex-col w-full font-sans">
-      {/* Top Header Row: Icon and Small Tag right-aligned */}
+    <div
+      id={`stat-${labelTag}`}
+      className="flex flex-col w-full font-sans"
+    >
+      {/* Header */}
       <div className="flex items-end justify-between pb-3 border-b border-gray-200">
-        <div className="text-[#800000]  w-12 h-12 flex items-center justify-start">
+        <div className="text-[#800000] w-12 h-12 flex items-center justify-start">
           {icon}
         </div>
-        <span className="text-[11px] font-bold text-gray-400 tracking-[0.25em] uppercase select-none">
+
+        <span className="text-[11px] font-bold text-gray-400 tracking-[0.25em] uppercase">
           {labelTag}
         </span>
       </div>
 
-      {/* Main Large Count Display */}
+      {/* Animated Number */}
       <div className="mt-6 flex items-baseline select-none">
         <h2 className="text-[64px] sm:text-[72px] font-black text-black leading-none tracking-tight">
-          {number}
+          {count}
         </h2>
-        <span className="text-[32px] sm:text-[38px] font-extrabold text-[#800000]  ml-1 select-none self-start pt-1">
+
+        <span className="text-[32px] sm:text-[38px] font-extrabold text-[#800000] ml-1 self-start pt-1">
           {suffix}
         </span>
       </div>
 
-      {/* Underneath Context Description Text */}
-      <p className="mt-3 text-black text-base md:text-[17px] font-medium tracking-normal">
+      {/* Description */}
+      <p className="mt-3 text-black text-base md:text-[17px] font-medium">
         {description}
       </p>
     </div>
   );
 };
-
 export const StatsSection: React.FC = () => {
   const statsData: StatItemProps[] = [
     {

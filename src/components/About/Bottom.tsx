@@ -1,6 +1,6 @@
 import React from 'react';
 import FadeIn from '../common/FadeIn';
-import AboutButton from './AboutButton';
+import { Button } from '../common/Button';
 
 export const Bottom: React.FC = () => {
   const handleContactClick = () => {
@@ -37,9 +37,9 @@ export const Bottom: React.FC = () => {
 
           {/* Button Callout */}
           <div className="mt-12" onClick={handleContactClick}>
-            <AboutButton variant="primary">
+            <Button variant="primary">
               CONTACT US NOW
-            </AboutButton>
+            </Button>
           </div>
 
         </div>

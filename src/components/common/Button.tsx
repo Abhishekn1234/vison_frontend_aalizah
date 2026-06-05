@@ -6,7 +6,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export const AboutButton: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   children,
   variant = 'primary',
   className = '',
@@ -79,4 +79,4 @@ export const AboutButton: React.FC<ButtonProps> = ({
   );
 };
 
-export default AboutButton;
+export default Button;

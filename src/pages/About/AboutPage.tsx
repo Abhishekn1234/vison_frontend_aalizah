@@ -4,7 +4,7 @@ import HeroBanner from "../../components/About/AboutBanner";
 import Hero from "../../components/About/AboutHero";
 // import AboutUs from "../../components/About/Aboutus";
 import Bottom from "../../components/About/Bottom";
-import ScrollToTop from "../../components/About/ScrollToTop";
+
 // import Services from "../../components/About/Services";
 import StatsSection from "../../components/About/StatsSection";
 // import VisionMission from "../../components/About/VisionMission";
@@ -21,7 +21,7 @@ export default function AboutPage() {
       <WhyChooseUs />
       {/* <VisionMission /> */}
       <Bottom/>
-      <ScrollToTop />
+  
     </main>
   );
 }
