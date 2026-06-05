@@ -38,7 +38,7 @@ export default function Teamfeatured() {
       <div className="flex items-center justify-center gap-2 mb-6">
         <span className="text-[#10a37f] text-sm font-semibold">◆</span>
         <span className="text-sm font-semibold text-gray-700 tracking-wider">
-          join ahmed al sheebani technical services
+          join ahmed aalizah vision technical services
         </span>
         <span className="text-[#10a37f] text-sm font-semibold">◆</span>
       </div>

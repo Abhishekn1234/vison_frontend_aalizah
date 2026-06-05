@@ -66,7 +66,7 @@ export default function OpenPositions() {
           <div className="w-full max-w-[320px] mx-auto lg:mx-0 mb-8">
             <img 
               src="/path-to-your-blue-helmet.png" 
-              alt="Ahmed Al Sheebani Technical Services Helmet" 
+              alt="Ahmed Aalizah Vision Technical Services Helmet" 
               className="w-full h-auto object-contain"
             />
           </div>
@@ -78,10 +78,10 @@ export default function OpenPositions() {
 
           {/* Email Link */}
           <a 
-            href="mailto:info@alsheebanitechnical.ae" 
+            href="mailto:info@alaalizah vision technical servicestechnical.ae" 
             className="text-black font-semibold text-lg md:text-xl underline decoration-2 underline-offset-4 hover:text-gray-700 transition-colors mb-8 block"
           >
-            info@alsheebanitechnical.ae
+            info@alaalizah vision technical servicestechnical.ae
           </a>
 
           {/* Contact Us Button */}

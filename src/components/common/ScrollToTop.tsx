@@ -1,5 +1,6 @@
 import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
+import Button from "./Button";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -18,13 +19,14 @@ export default function ScrollToTop() {
   if (!visible) return null;
 
   return (
-    <button
+    <Button
       onClick={() =>
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         })
       }
+      variant="borderless"
       className="
         fixed
         right-6
@@ -46,6 +48,6 @@ export default function ScrollToTop() {
         className="text-[#2BC77A]"
         size={30}
       />
-    </button>
+    </Button>
   );
 }

@@ -8,7 +8,7 @@ export default function HeroBanner() {
 
         {/* Background */}
         <img
-          src="./About us banner.png"
+          src="./about (2).png"
           alt="About Banner"
           className="absolute inset-0 w-full h-full object-cover"
         />

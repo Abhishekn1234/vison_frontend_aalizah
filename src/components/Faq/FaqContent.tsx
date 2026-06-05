@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Plus, Minus} from 'lucide-react';
 import FadeIn from '../common/FadeIn';
+import Button from '../common/Button';
 
 
 export default function FaqContent() {
@@ -18,11 +19,11 @@ export default function FaqContent() {
       mainWord: "QUESTIONS",
       items: [
         {
-          q: "What services does Al Sheebani Technical Services offer?",
+          q: "What services does Aalizah Vision Technical Services offer?",
           a: "We provide complete maintenance and technical solutions across Dubai and the UAE, including MEP works, general maintenance, facility management, carpentry, painting, and ventilation systems."
         },
         {
-          q: "Where is Al Sheebani Technical Services located?",
+          q: "Where is Aalizah Vision Technical Services located?",
           a: "Our main office is located in Dubai, UAE, positioning us perfectly to efficiently serve commercial and residential clients right across the emirate and surrounding regions."
         },
         {
@@ -30,11 +31,11 @@ export default function FaqContent() {
           a: "Yes! We cater fully to both sectors. Whether it's a routine home maintenance repair or a full-scale corporate facility management project, our team is equipped to handle it."
         },
         {
-          q: "What makes Al Sheebani Technical Services different from others?",
+          q: "What makes Aalizah Vision Technical Services different from others?",
           a: "Our commitment to premium quality execution, reliable response times, transparent project pricing, and a highly skilled team of certified technical professionals sets us apart."
         },
         {
-          q: "How long has Al Sheebani Technical Services been operating in Dubai?",
+          q: "How long has Aalizah Vision Technical Services been operating in Dubai?",
           a: "We have built a strong standing foundation across the UAE over the years, delivering continuous excellence and building trusted relationships with major commercial and residential clients."
         },
         {
@@ -42,7 +43,7 @@ export default function FaqContent() {
           a: "Absolutely. All our engineers, technicians, and handymen undergo rigorous background checks, strict technical training, and possess certified credentials to safely execute maintenance jobs."
         },
         {
-          q: "How can I contact Al Sheebani Technical Services?",
+          q: "How can I contact Aalizah Vision Technical Services?",
           a: "You can reach us through our online contact dashboard, drop an email to our HR and operations team, or call our direct helpline for instant booking assistance."
         }
       ]
@@ -145,7 +146,7 @@ export default function FaqContent() {
           About Our Services, Process, and Support
         </h1>
         <p className="text-gray-500 text-sm md:text-[15px] leading-relaxed max-w-3xl mx-auto font-medium">
-          We know your time is valuable, so we’ve gathered the most common questions our clients ask about Al Sheebani Technical Services.
+          We know your time is valuable, so we’ve gathered the most common questions our clients ask about Aalizah Vision Technical Services.
           Whether you’re curious about our maintenance process, emergency support, or pricing, you’ll find everything you need to know right here.
         </p>
       </div>
@@ -202,8 +203,9 @@ export default function FaqContent() {
                     key={itemIdx} 
                     className="border-b border-gray-200 py-5 transition-colors duration-200"
                   >
-                    <button
+                    <Button
                       onClick={() => toggleAccordion(uniqueId)}
+                      variant="none"
                       className="w-full flex items-start text-left gap-4 focus:outline-none group py-1"
                     >
                       {/* Plus / Minus Circular Brand Accent Icon */}
@@ -215,7 +217,7 @@ export default function FaqContent() {
                       <span className="font-extrabold text-black text-[16px] md:text-[17px] tracking-tight leading-snug">
                         {item.q}
                       </span>
-                    </button>
+                    </Button>
 
                     {/* Accordion Solution Block */}
                     <div 

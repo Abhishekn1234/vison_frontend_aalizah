@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'none';
+  variant?: 'primary' | 'secondary' | 'none' | 'borderless';
   className?: string;
 }
 
@@ -31,6 +31,11 @@ export const Button: React.FC<ButtonProps> = ({
     none: `
       bg-white hover:bg-[#1EA665] hover:text-white
       active:bg-[#178551] active:text-white
+    `,
+    borderless: `
+      bg-transparent border-none text-white
+      hover:bg-[#1EA665] hover:text-white
+      active:bg-[#178551] active:text-white
     `
   };
 
@@ -39,7 +44,8 @@ export const Button: React.FC<ButtonProps> = ({
     primary: 'text-white',
     // The arrow is green initially, then turns white when the background goes green on hover
     secondary: 'text-[#1EA665] group-hover:text-white transition-colors duration-300',
-    none: ''
+    none: '',
+    borderless: ''
   };
 
   return (
@@ -65,7 +71,9 @@ export const Button: React.FC<ButtonProps> = ({
       <span>{children}</span>
       
       {/* Dynamic Arrow Icon */}
-      <svg 
+      {variant !== 'borderless' && (
+        <>
+          <svg 
         xmlns="http://www.w3.org/2000/svg" 
         fill="none" 
         viewBox="0 0 24 24" 
@@ -75,6 +83,9 @@ export const Button: React.FC<ButtonProps> = ({
       >
         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H4.5" />
       </svg>
+        </>
+      )}
+     
     </button>
   );
 };

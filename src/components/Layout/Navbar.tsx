@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import Button from "../common/Button";
+import FadeIn from "../common/FadeIn";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -8,14 +10,16 @@ export default function Navbar() {
 
   return (
     <header className="top-0 z-50">
+     <FadeIn>
 
+    
       {/* MOBILE TOP BAR (LOGO + MENU BUTTON) */}
       <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-[#354145] text-white">
        <img src="./AV Logo.png" alt="logo" className="w-20" />
 
-        <button onClick={() => setOpen(!open)}>
+        <Button onClick={() => setOpen(!open)} variant="borderless">
           {open ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        </Button>
       </div>
 
       {/* NAVBAR DESKTOP */}
@@ -47,9 +51,9 @@ export default function Navbar() {
             {/* ABOUT DROPDOWN */}
             <div className="relative group">
 
-              <button className="flex items-center gap-2 hover:text-[#2BC77A]">
-                ABOUT US <ChevronDown size={18} />
-              </button>
+              <Button className="flex items-center gap-2 hover:text-[#2BC77A]" variant="borderless">
+                ABOUT US 
+              </Button>
 
               <div
                 className="
@@ -119,7 +123,8 @@ export default function Navbar() {
             </Link>
 
             {/* ABOUT MOBILE */}
-            <button
+            <Button
+            variant="borderless"
               onClick={() => setAboutOpen(!aboutOpen)}
               className="p-4 border-b border-white/10 flex justify-between"
             >
@@ -128,7 +133,7 @@ export default function Navbar() {
                 size={18}
                 className={`${aboutOpen ? "rotate-180" : ""} transition`}
               />
-            </button>
+            </Button>
 
             {aboutOpen && (
               <div className="bg-[#2e383b]">
@@ -193,7 +198,7 @@ export default function Navbar() {
           </div>
         </div>
       )}
-
+       </FadeIn>
     </header>
   );
 }
