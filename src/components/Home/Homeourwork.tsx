@@ -1,4 +1,4 @@
-import  { useRef } from 'react';
+import  { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Button from '../common/Button';
 import FadeIn from '../common/FadeIn';
@@ -6,6 +6,8 @@ import FadeIn from '../common/FadeIn';
 export default function Homeourwork() {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+  const [activeCard, setActiveCard] = useState(0);
+const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Projects data from image_8a8dc4.png
   const projects = [
@@ -58,25 +60,50 @@ export default function Homeourwork() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              // Starts invisible and offset to the right
-              initial={{ x: 100, opacity: 0 }}
-              // Animates to center and fully visible when scrolled into view
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.15, // Creates the sequential right-to-left cascade effect
-                ease: [0.16, 1, 0.3, 1] // Ultra smooth clean deceleration curve
-              }}
-              whileHover={{ y: -8 }} // Clean subtle lift effect on hover
-              className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md bg-zinc-900 group cursor-pointer"
-            >
+           <motion.div
+  ref={(el) => {
+    cardRefs.current[index] = el;
+  }}
+  key={index}
+  initial={{
+    opacity: 0,
+    y: 80,
+    scale: 0.95,
+  }}
+  animate={
+    isInView
+      ? {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+        }
+      : {}
+  }
+  transition={{
+    duration: 0.8,
+    delay: index * 0.15,
+  }}
+  whileHover={{
+    y: -12,
+    scale: 1.02,
+  }}
+  className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-xl bg-zinc-900 group cursor-pointer"
+>
               {/* Card Project Image */}
               <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-[0.65]"
+              className="
+w-full
+h-full
+object-cover
+brightness-[0.65]
+transition-all
+duration-1000
+ease-out
+group-hover:scale-110
+group-hover:rotate-1
+"
               />
 
               {/* Dark Gradient Overlay to match image_8a8dc4.png */}
@@ -129,6 +156,30 @@ export default function Homeourwork() {
             </motion.div>
           ))}
         </div>
+        <div className="flex justify-center gap-3 mt-12">
+  {projects.map((_, index) => (
+    <button
+    
+      key={index}
+      onClick={() => {
+        setActiveCard(index);
+
+        cardRefs.current[index]?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }}
+      className={`
+        transition-all duration-300 rounded-full
+        ${
+          activeCard === index
+            ? "bg-[#800000] w-8 h-3"
+            : "bg-gray-300 w-3 h-3"
+        }
+      `}
+    />
+  ))}
+</div>
         </FadeIn>
 
       </div>
