@@ -69,8 +69,8 @@ export default function HomeWhychooseus() {
         {/* Left Column: Heading Layout */}
         <div className="lg:col-span-6 flex flex-col space-y-4">
           {/* Badge */}
-          <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs md:text-sm tracking-widest uppercase">
-            <span className="w-4 h-2 bg-emerald-500 rounded-xs transform -skew-x-12 inline-block"></span>
+          <div className="flex items-center gap-2 text-[#800000] font-bold text-xs md:text-sm tracking-widest uppercase">
+            <span className="w-4 h-2 bg-[#800000] rounded-xs transform -skew-x-12 inline-block"></span>
             why choose us
           </div>
 
@@ -98,7 +98,7 @@ export default function HomeWhychooseus() {
               className="flex items-start gap-4 p-5 md:p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-white/20 transition-colors"
             >
               {/* Checklist Checked Badge */}
-              <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shrink-0 shadow-md shadow-emerald-500/20 text-slate-950 mt-1">
+              <div className="w-8 h-8 rounded-full bg-[#800000] flex items-center justify-center shrink-0 shadow-md shadow-emerald-500/20 text-slate-950 mt-1">
                 <svg className="w-4 h-4 text-white font-bold" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
@@ -125,34 +125,34 @@ export default function HomeWhychooseus() {
           
           {/* Stat Item 1 */}
           <div className="space-y-1">
-            <span className="block text-gray-400 text-xs md:text-sm font-bold tracking-widest uppercase">
+            <span className="block text-[#800000] text-xs md:text-sm font-bold tracking-widest uppercase">
               Projects Completed
             </span>
             <div className="text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter flex items-center">
               <Counter value={100} />
-              <span className="text-emerald-400 font-medium ml-1">+</span>
+              <span className="text-[#800000] font-medium ml-1">+</span>
             </div>
           </div>
 
           {/* Stat Item 2 */}
           <div className="space-y-1">
-            <span className="block text-gray-400 text-xs md:text-sm font-bold tracking-widest uppercase">
+            <span className="block text-[#800000] text-xs md:text-sm font-bold tracking-widest uppercase">
               Satisfied Clients
             </span>
             <div className="text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter flex items-center">
               <Counter value={500} />
-              <span className="text-emerald-400 font-medium ml-1">+</span>
+              <span className="text-[#800000] font-medium ml-1">+</span>
             </div>
           </div>
 
           {/* Stat Item 3 */}
           <div className="space-y-1">
-            <span className="block text-gray-400 text-xs md:text-sm font-bold tracking-widest uppercase">
+            <span className="block text-[#800000] text-xs md:text-sm font-bold tracking-widest uppercase">
               Years of Experience
             </span>
             <div className="text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter flex items-center">
               <Counter value={10} />
-              <span className="text-emerald-400 font-medium ml-1">+</span>
+              <span className="text-[#800000] font-medium ml-1">+</span>
             </div>
           </div>
 

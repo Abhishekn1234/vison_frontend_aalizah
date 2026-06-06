@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'none' | 'borderless';
+  variant?: 'primary' | 'secondary' | 'none' | 'borderless' |'faq';
   className?: string;
 }
 
@@ -19,24 +19,27 @@ export const Button: React.FC<ButtonProps> = ({
     primary: `
       bg-[#2E373A] text-white
       hover:bg-[#1EA665] 
-      active:bg-[#178551]
+      active:bg-[#800000]
     `,
     // New White button from screenshot -> turns green on hover/click (text turns white)
     secondary: `
       bg-white text-black border border-transparent
       hover:bg-[#1EA665] hover:text-white
-      active:bg-[#178551] active:text-white
+      active:bg-[#800000] active:text-white
       shadow-sm
     `,
     none: `
       bg-white hover:bg-[#1EA665] hover:text-white
-      active:bg-[#178551] active:text-white
+      active:bg-[#800000] active:text-white
     `,
     borderless: `
       bg-transparent border-none text-white
       hover:bg-[#1EA665] hover:text-white
-      active:bg-[#178551] active:text-white
-    `
+      active:bg-[#800000] active:text-white
+    `,
+    faq:`bg-transparent border-none text-white
+    hover:bg-gray-100 hover:text-black
+    active:bg-gray-100 active:text-black`
   };
 
   // 2. Define arrow color states matching the variant
@@ -45,7 +48,8 @@ export const Button: React.FC<ButtonProps> = ({
     // The arrow is green initially, then turns white when the background goes green on hover
     secondary: 'text-[#1EA665] group-hover:text-white transition-colors duration-300',
     none: '',
-    borderless: ''
+    borderless: '',
+    faq:''
   };
 
   return (
@@ -71,7 +75,7 @@ export const Button: React.FC<ButtonProps> = ({
       <span>{children}</span>
       
       {/* Dynamic Arrow Icon */}
-      {variant !== 'borderless' && (
+      {variant !== 'borderless' && variant !=='faq' && (
         <>
           <svg 
         xmlns="http://www.w3.org/2000/svg" 

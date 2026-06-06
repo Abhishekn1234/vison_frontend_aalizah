@@ -2,6 +2,7 @@
 import { MapPin } from 'lucide-react';
 import FadeIn from '../common/FadeIn';
 import Button from '../common/Button';
+import { Link } from 'react-router-dom';
 
 
 export default function OpenPositions() {
@@ -27,7 +28,7 @@ export default function OpenPositions() {
         <div className="lg:col-span-7 xl:col-span-8">
           {/* Section Heading */}
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-black mb-10">
-            <span className="text-gray-400 font-bold">OPEN </span>POSITIONS
+            <span className="text-[#800000] font-bold">OPEN </span>POSITIONS
           </h2>
 
           {/* Jobs Table/List */}
@@ -48,7 +49,7 @@ export default function OpenPositions() {
                 </div>
 
                 {/* Right Side: Location Pin */}
-                <div className="flex items-center gap-2 text-[#10a37f] shrink-0 sm:text-right">
+                <div className="flex items-center gap-2 text-[#800000] shrink-0 sm:text-right">
                   <MapPin className="w-5 h-5 stroke-[2.5]" />
                   <span className="text-lg font-semibold text-black">
                     {job.location}
@@ -65,8 +66,8 @@ export default function OpenPositions() {
           {/* Hard Hat Illustration Placeholder (Replace src with your actual blue helmet image asset) */}
           <div className="w-full max-w-[320px] mx-auto lg:mx-0 mb-8">
             <img 
-              src="/path-to-your-blue-helmet.png" 
-              alt="Ahmed Aalizah Vision Technical Services Helmet" 
+              src="/Abouts.png" 
+              alt="Aalizah Vision Technical Services Helmet" 
               className="w-full h-auto object-contain"
             />
           </div>
@@ -77,12 +78,12 @@ export default function OpenPositions() {
           </p>
 
           {/* Email Link */}
-          <a 
-            href="mailto:info@alaalizah vision technical servicestechnical.ae" 
+          <Link
+            to="mailto:info@aalizahvision.com" 
             className="text-black font-semibold text-lg md:text-xl underline decoration-2 underline-offset-4 hover:text-gray-700 transition-colors mb-8 block"
           >
-            info@alaalizah vision technical servicestechnical.ae
-          </a>
+            info@aalizahvision.com
+          </Link>
 
           {/* Contact Us Button */}
           <Button variant="primary" className="mt-auto">

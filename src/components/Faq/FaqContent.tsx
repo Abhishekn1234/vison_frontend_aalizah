@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Plus, Minus} from 'lucide-react';
 import FadeIn from '../common/FadeIn';
-import Button from '../common/Button';
+import {Button} from '../common/Button';
 
 
 export default function FaqContent() {
@@ -128,100 +128,116 @@ export default function FaqContent() {
     }
   ];
 
-  return (
-    <div className="relative min-h-screen bg-white font-sans text-black px-6 py-12 md:py-20 select-none">
-       <FadeIn>
-         <div className="flex items-center justify-center gap-2 mb-8">
-        <span className="text-[#10a37f] text-xs font-semibold">◆</span>
-        <p className="text-xs md:text-sm font-semibold text-gray-900 tracking-wide uppercase text-center">
-          "your comfort and satisfaction are our top priorities — we’re always here to help."
-        </p>
-        <span className="text-[#10a37f] text-xs font-semibold">◆</span>
-      </div>
+ return (
+  <div className="relative min-h-screen font-sans text-black px-6 py-12 md:py-20 select-none">
 
-      {/* Main Main Title Block */}
+    {/* Top Tagline */}
+    <FadeIn>
+      <div className="flex items-center justify-center gap-2 mb-8 flex-wrap">
+        <span className="text-[#800000] text-xs font-semibold shrink-0">◆</span>
+
+        <p className="text-xs md:text-sm font-semibold text-gray-900 tracking-wide uppercase text-center">
+          Your comfort and satisfaction are our top priorities — we're always here to help.
+        </p>
+
+        <span className="text-[#800000] text-xs font-semibold shrink-0">◆</span>
+      </div>
+    </FadeIn>
+
+    {/* Main Title */}
+    <FadeIn>
       <div className="max-w-4xl mx-auto text-center mb-10">
-        <h1 className="text-3xl md:text-[54px] font-bold text-[#10a37f] tracking-tight leading-[1.1] mb-6">
-          Answers to Your Questions — <br />
+        <h1 className="text-3xl md:text-[54px] font-bold text-[#800000] tracking-tight leading-[1.1] mb-6">
+          Answers to Your Questions —
+          <br />
           About Our Services, Process, and Support
         </h1>
+
         <p className="text-gray-500 text-sm md:text-[15px] leading-relaxed max-w-3xl mx-auto font-medium">
-          We know your time is valuable, so we’ve gathered the most common questions our clients ask about Aalizah Vision Technical Services.
-          Whether you’re curious about our maintenance process, emergency support, or pricing, you’ll find everything you need to know right here.
+          We know your time is valuable, so we've gathered the most common
+          questions our clients ask about Aalizah Vision Technical Services.
+          Whether you're curious about our maintenance process, emergency
+          support, or pricing, you'll find everything you need to know right
+          here.
         </p>
       </div>
+    </FadeIn>
 
-      {/* Loop Categories */}
-      <div className="max-w-5xl mx-auto space-y-20 mt-16 pb-24">
-        {faqData.map((cat, catIdx) => (
-          <div key={catIdx} className="w-full">
-            
-            {/* Big Section Divided Heading */}
-           {/* Big Section Divided Heading */}
-<div className="text-center mb-12 border-b border-gray-100 pb-10">
+    {/* FAQ Categories */}
+    <div className="max-w-5xl mx-auto space-y-20 mt-16 pb-24">
+      {faqData.map((cat, catIdx) => (
+        <FadeIn key={catIdx}>
+          <div className="w-full">
 
-  {cat.category === "PAYMENTS, PRICING & SUPPORT" ? (
-    <>
-      {/* Line 1 */}
-      <p className="text-4xl tracking-[0.35em] text-gray-400 font-bold uppercase mb-2">
-        PAYMENTS
-      </p>
+            {/* Category Heading */}
+            <div className="text-center mb-12 border-b border-gray-100 pb-10">
 
-      {/* Line 2 */}
-      <h2 className="text-4xl md:text-6xl font-black tracking-tight uppercase leading-[0.9] text-[#10a37f]">
-        PRICING
-      </h2>
+              {cat.category === "PAYMENTS, PRICING & SUPPORT" ? (
+                <>
+                  <p className="text-4xl tracking-[0.35em] text-[#800000] font-bold uppercase mb-2">
+                    PAYMENTS
+                  </p>
 
-      {/* Divider */}
-    
+                  <h2 className="text-4xl md:text-6xl font-black tracking-tight uppercase leading-[0.9] text-[#800000]">
+                    PRICING
+                  </h2>
 
-      {/* Line 3 */}
-      <h3 className="text-3xl md:text-4xl font-bold text-black uppercase tracking-wide">
-        SUPPORT
-      </h3>
-    </>
-  ) : (
-    <>
-      {/* DEFAULT (unchanged for others) */}
-      <h2 className="text-4xl md:text-5xl font-black tracking-tight uppercase">
-        <span className="text-gray-400 font-bold mr-3">{cat.highlightWord}</span>
-        <span className="text-black">{cat.mainWord}</span>
-      </h2>
-    </>
-  )}
+                  <h3 className="text-3xl md:text-4xl font-bold text-black uppercase tracking-wide mt-2">
+                    SUPPORT
+                  </h3>
+                </>
+              ) : (
+                <h2 className="text-4xl md:text-5xl font-black tracking-tight uppercase">
+                  <span className="text-[#800000] font-bold mr-3">
+                    {cat.highlightWord}
+                  </span>
 
-</div>
+                  <span className="text-black">
+                    {cat.mainWord}
+                  </span>
+                </h2>
+              )}
 
-            {/* Accordion Questions List */}
+            </div>
+
+            {/* Accordion Questions */}
             <div className="space-y-1">
               {cat.items.map((item, itemIdx) => {
                 const uniqueId = `${catIdx}-${itemIdx}`;
                 const isOpen = openIndex === uniqueId;
 
                 return (
-                  <div 
-                    key={itemIdx} 
+                  <div
+                    key={itemIdx}
                     className="border-b border-gray-200 py-5 transition-colors duration-200"
                   >
-                    <Button
-                      onClick={() => toggleAccordion(uniqueId)}
-                      variant="none"
-                      className="w-full flex items-start text-left gap-4 focus:outline-none group py-1"
-                    >
-                      {/* Plus / Minus Circular Brand Accent Icon */}
-                      <span className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 transition-colors ${isOpen ? 'bg-[#10a37f] text-white' : 'bg-[#10a37f] text-white'}`}>
-                        {isOpen ? <Minus className="w-3 h-3 stroke-[3]" /> : <Plus className="w-3 h-3 stroke-[3]" />}
-                      </span>
+                 <Button
+  onClick={() => toggleAccordion(uniqueId)}
+  variant="faq"
+  className="w-full"
+>
+  <div className="w-full flex justify-between items-center gap-4">
+    <span className="flex-1 text-left font-extrabold text-black text-[16px] md:text-[17px] tracking-tight leading-snug">
+      {item.q}
+    </span>
 
-                      {/* Question Text */}
-                      <span className="font-extrabold text-black text-[16px] md:text-[17px] tracking-tight leading-snug">
-                        {item.q}
-                      </span>
-                    </Button>
+    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#800000] text-white flex items-center justify-center">
+      {isOpen ? (
+        <Minus className="w-3 h-3 stroke-[3]" />
+      ) : (
+        <Plus className="w-3 h-3 stroke-[3]" />
+      )}
+    </span>
+  </div>
+                 </Button>
 
-                    {/* Accordion Solution Block */}
-                    <div 
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}`}
+                    {/* Answer */}
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                        isOpen
+                          ? "max-h-[500px] opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       <div className="pl-10 pr-4 pt-3 pb-2 text-sm md:text-[15px] leading-relaxed text-gray-500 font-normal">
                         {item.a}
@@ -233,14 +249,10 @@ export default function FaqContent() {
             </div>
 
           </div>
-        ))}
-      </div>
-
-     
-       </FadeIn>
-     
-     
-
+        </FadeIn>
+      ))}
     </div>
-  );
+
+  </div>
+);
 }

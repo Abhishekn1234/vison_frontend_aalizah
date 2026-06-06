@@ -68,7 +68,7 @@ const StatItem: React.FC<StatItemProps> = ({
           {icon}
         </div>
 
-        <span className="text-[11px] font-bold text-gray-400 tracking-[0.25em] uppercase">
+        <span className="text-[11px] font-bold text-[#800000] tracking-[0.25em] uppercase">
           {labelTag}
         </span>
       </div>

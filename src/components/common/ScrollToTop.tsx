@@ -45,7 +45,7 @@ export default function ScrollToTop() {
       "
     >
       <ChevronUp
-        className="text-[#2BC77A]"
+        className="text-[#800000]"
         size={30}
       />
     </Button>

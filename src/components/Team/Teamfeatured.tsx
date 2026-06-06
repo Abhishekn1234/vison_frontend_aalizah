@@ -7,7 +7,7 @@ export default function Teamfeatured() {
   const features = [
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
-      iconBg: "bg-[#10a37f]", // Vibrant green
+      iconBg: "bg-[#800000]", // Vibrant green
       title: "Professional Growth",
       description: "We provide continuous learning and on-the-job training to help you improve your skills and advance your career."
     },
@@ -19,7 +19,7 @@ export default function Teamfeatured() {
     },
     {
       icon: <Banknote className="w-8 h-8 text-white" />,
-      iconBg: "bg-[#10a37f]", // Vibrant green
+      iconBg: "bg-[#800000]", // Vibrant green
       title: "Competitive Benefits",
       description: "Enjoy fair pay, overtime opportunities, and job stability in a growing technical services company."
     },
@@ -36,16 +36,16 @@ export default function Teamfeatured() {
       <FadeIn>
         {/* Top Small Header */}
       <div className="flex items-center justify-center gap-2 mb-6">
-        <span className="text-[#10a37f] text-sm font-semibold">◆</span>
+        <span className="text-[#800000] text-sm font-semibold">◆</span>
         <span className="text-sm font-semibold text-gray-700 tracking-wider">
-          join ahmed aalizah vision technical services
+          join  aalizah vision technical services
         </span>
-        <span className="text-[#10a37f] text-sm font-semibold">◆</span>
+        <span className="text-[#800000] text-sm font-semibold">◆</span>
       </div>
 
       {/* Main Heading */}
       <div className="text-center max-w-4xl mx-auto mb-20">
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-400 uppercase leading-tight">
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-[#800000] uppercase leading-tight">
           JOIN OUR GROWING <br />
           <span className="text-black font-extrabold block mt-2">TEAM OF</span>
           <span className="text-black font-extrabold block mt-1">MAINTENANCE</span>

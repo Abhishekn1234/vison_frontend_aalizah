@@ -20,9 +20,9 @@ export default function HeroBanner() {
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
 
           {/* Small optional subtitle (you can remove if not needed) */}
-          <p className="text-white/80 text-xs md:text-sm uppercase tracking-[4px] mb-3">
+          {/* <p className="text-white/80 text-xs md:text-sm uppercase tracking-[4px] mb-3">
             Welcome To
-          </p>
+          </p> */}
 
           <h1 className="
             text-white

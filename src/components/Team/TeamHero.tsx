@@ -18,7 +18,7 @@ export default function TeamHero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/About 2.png')",
+            backgroundImage: "url('/Join our team.png')",
           }}
         />
 

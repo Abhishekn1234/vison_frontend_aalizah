@@ -3,55 +3,42 @@ import FadeIn from "../common/FadeIn";
 
 export default function FaqHero() {
   return (
-    <div className="relative w-full h-[60vh] overflow-hidden">
+   <div className="relative w-full h-[60vh] overflow-hidden">
+  <FadeIn>
+    {/* Background Image */}
+    <div className="absolute inset-0 z-0">
+      <img
+        src="/FAQ.jpeg"
+        alt="FAQ Background"
+        className="w-full h-full object-cover"
+      />
 
-      <FadeIn>
-        {/* Background Layer */}
-        <div className="absolute inset-0 z-0">
-          
-          {/* Logo background */}
-          <img
-            src="./About us banner.png"
-            alt="logo"
-            className="
-              absolute
-              right-10
-              bottom-10
-            
-              opacity-10
-              pointer-events-none
-              select-none
-            "
-          />
-
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/25" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 pb-6">
-
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight uppercase mb-4">
-            FAQS
-          </h1>
-
-          <div className="inline-flex items-center gap-2 border border-white/20 bg-black/40 backdrop-blur-sm px-5 py-2.5 rounded-xl">
-            <Link
-              to="/"
-              className="text-[11px] font-black tracking-widest text-gray-300 uppercase hover:text-white"
-            >
-              HOME
-            </Link>
-
-            <span className="text-gray-400">&gt;</span>
-
-            <span className="text-[11px] font-black tracking-widest text-white uppercase">
-              FAQS
-            </span>
-          </div>
-
-        </div>
-      </FadeIn>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/50" />
     </div>
+
+    {/* Content */}
+    <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 mt-40">
+      <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-white tracking-tight uppercase mb-4">
+        FAQS
+      </h1>
+
+      <div className="inline-flex items-center gap-2 border border-white/20 bg-black/40 backdrop-blur-sm px-5 py-2.5 rounded-xl">
+        <Link
+          to="/"
+          className="text-[11px] font-black tracking-widest text-gray-300 uppercase hover:text-white"
+        >
+          HOME
+        </Link>
+
+        <span className="text-gray-400">&gt;</span>
+
+        <span className="text-[11px] font-black tracking-widest text-white uppercase">
+          FAQS
+        </span>
+      </div>
+    </div>
+  </FadeIn>
+</div>
   );
 }

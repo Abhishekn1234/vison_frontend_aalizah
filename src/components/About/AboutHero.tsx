@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="max-w-[1500px] mx-auto px-6 md:px-12 lg:px-16">
           {/* Section Label */}
           <div className="flex items-center gap-3 mb-8 mt-4">
-            <div className="w-5 h-2 bg-[#1EA665] -skew-x-12" />
+            <div className="w-5 h-2 bg-[#800000] -skew-x-12" />
             <span className="text-black text-sm md:text-base font-semibold lowercase tracking-wide">
               who we are
             </span>
@@ -41,11 +41,11 @@ export default function Hero() {
             {/* LEFT */}
             <div className="space-y-10">
               <h1 className="uppercase tracking-[-0.03em] leading-[0.95] text-left">
-                <span className="block text-[#a3a19b] font-semibold text-[32px] sm:text-[45px] md:text-[60px] lg:text-[72px] xl:text-[86px]">
+                <span className="block text-[#800000] font-semibold text-[32px] sm:text-[45px] md:text-[60px] lg:text-[72px] xl:text-[86px]">
                   DELIVERING RELIABLE
                 </span>
 
-                <span className="block text-[#a3a19b] font-semibold text-[32px] sm:text-[45px] md:text-[60px] lg:text-[72px] xl:text-[86px]">
+                <span className="block text-[#800000] font-semibold text-[32px] sm:text-[45px] md:text-[60px] lg:text-[72px] xl:text-[86px]">
                   MAINTENANCE WITH
                 </span>
 
@@ -53,6 +53,11 @@ export default function Hero() {
                   UNMATCHED QUALITY
                 </span>
               </h1>
+              <img
+              src="/About us team.png"
+              alt="Technical Services"
+              className="w-98 h-40 md:w-72 md:h-28 lg:w-[720px] lg:h-[420px] object-cover "
+            />
             </div>
 
             {/* RIGHT */}

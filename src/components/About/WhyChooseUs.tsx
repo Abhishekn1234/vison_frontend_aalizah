@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
 
           {/* Label */}
           <div className="flex items-center gap-3 mb-8 mt-5">
-            <div className="w-5 h-2 bg-[#2BC77A] -skew-x-12" />
+            <div className="w-5 h-2 bg-[#800000] -skew-x-12" />
             <span className="text-black text-sm md:text-base font-semibold lowercase tracking-wide">
               why choose us
             </span>
@@ -88,15 +88,15 @@ export default function WhyChooseUs() {
                 {/* 🔥 Reduced Heading Size + Better Weight */}
                 <h2 className="uppercase font-semibold tracking-[-0.03em] leading-[0.95] text-left">
 
-                  <span className="block text-[#a3a19b] text-[28px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[78px]">
+                  <span className="block text-[#800000] text-[28px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[78px]">
                     YOUR TRUSTED
                   </span>
 
-                  <span className="block text-[#a3a19b] text-[28px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[78px]">
+                  <span className="block text-[#800000] text-[28px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[78px]">
                     PARTNER FOR
                   </span>
 
-                  <span className="block text-[#a3a19b] text-[28px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[78px]">
+                  <span className="block text-[#800000] text-[28px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[78px]">
                     EVERY
                   </span>
 

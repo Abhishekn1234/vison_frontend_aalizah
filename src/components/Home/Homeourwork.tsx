@@ -39,15 +39,15 @@ export default function Homeourwork() {
         <div className="flex flex-col items-center text-center space-y-4 mb-16">
           {/* Centered Badge */}
           <div className="flex items-center gap-3 text-slate-900 font-bold text-xs md:text-sm tracking-widest uppercase">
-            <span className="w-4 h-2 bg-emerald-500 rounded-xs transform -skew-x-12 inline-block"></span>
+            <span className="w-4 h-2 bg-[#800000] rounded-xs transform -skew-x-12 inline-block"></span>
             our work
-            <span className="w-4 h-2 bg-emerald-500 rounded-xs transform -skew-x-12 inline-block"></span>
+            <span className="w-4 h-2 bg-[#800000] rounded-xs transform -skew-x-12 inline-block"></span>
           </div>
 
           {/* Three-Line Luxury Title Layout */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-black leading-[1.05] uppercase max-w-3xl">
             Excellence In <br />
-            <span className="text-gray-400 block my-1">Every Project</span>
+            <span className="text-[#800000] block my-1">Every Project</span>
             We Deliver
           </h2>
         </div>
@@ -106,7 +106,7 @@ export default function Homeourwork() {
           mt-4
           px-5
           py-2.5
-          bg-emerald-500
+          bg-[#800000]
           text-white
           text-sm
           font-semibold
@@ -117,7 +117,7 @@ export default function Homeourwork() {
           translate-y-6
           group-hover:opacity-100
           group-hover:translate-y-0
-          hover:bg-emerald-600
+          hover:bg-[#800000]
         "
       >
         View Details

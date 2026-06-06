@@ -12,7 +12,7 @@ export const Bottom: React.FC = () => {
       <FadeIn>
         {/* Background Image */}
         <img
-          src="https://images.unsplash.com/photo-1504148455328-c376907d081c?q=80&w=1920&auto=format&fit=crop"
+          src="/Need Help.jpeg"
           alt="Carpenter working in workshop"
           className="absolute inset-0 w-full h-full object-cover"
         />

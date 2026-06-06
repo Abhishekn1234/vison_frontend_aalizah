@@ -21,7 +21,7 @@ export default function HomeAbout() {
             {/* The 500+ Stats Overlay Box inside the image */}
             <div className="absolute bottom-0 left-0 bg-slate-950/40 backdrop-blur-xs p-6 md:p-8 text-white w-full sm:w-72 rounded-tr-2xl">
               <div className="text-5xl md:text-6xl font-black tracking-tight flex items-center">
-                500<span className="text-emerald-400 ml-1 font-light">+</span>
+                500<span className="text-[#800000] ml-1 font-light">+</span>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ export default function HomeAbout() {
           
           {/* Small Badge */}
           <div className="flex items-center gap-2 text-slate-900 font-bold text-sm tracking-wider uppercase">
-            <span className="w-4 h-2 bg-emerald-500 rounded-xs transform -skew-x-12 inline-block"></span>
+            <span className="w-4 h-2 bg-[#800000] rounded-xs transform -skew-x-12 inline-block"></span>
             about us
           </div>
 
@@ -58,7 +58,7 @@ export default function HomeAbout() {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-black leading-[1.05] uppercase">
             Delivering <br />
             Quality <br />
-            <span className="text-gray-400 block my-1">Service</span>
+            <span className="text-[#800000] block my-1">Service</span>
             Every Time
           </h2>
 
@@ -90,7 +90,7 @@ export default function HomeAbout() {
           {/* Quote & Phone Number Row */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             {/* Quote Block */}
-            <p className="text-gray-400 text-xs md:text-sm italic leading-relaxed max-w-md font-medium">
+            <p className="text-[#800000] text-xs md:text-sm italic leading-relaxed max-w-md font-medium">
               “We believe every home deserves expert care. From repairs to cleaning, we make 
               your life easier. Contact our team today for reliable service done right.”
             </p>
@@ -105,7 +105,7 @@ export default function HomeAbout() {
                   <path d="M21.384 17.791l-3.75-3.437a1.251 1.251 0 0 0-1.743.044l-1.545 1.545c-.443-.24-1.045-.613-1.68-1.248-.634-.634-1.008-1.236-1.247-1.68l1.545-1.545a1.245 1.245 0 0 0 .044-1.743L9.571 4.02a1.25 1.25 0 0 0-1.724-.034l-2.02 1.834c-.818.744-1.157 1.87-.872 2.955.748 2.85 2.801 6.275 6.078 9.552 3.277 3.277 6.702 5.33 9.552 6.078a3.11 3.11 0 0 0 2.955-.872l1.834-2.02a1.25 1.25 0 0 0-.03-.172z"/>
                 </svg>
               </div>
-              <span className="text-xl md:text-2xl font-black text-[#10B981] tracking-tight whitespace-nowrap">
+              <span className="text-xl md:text-2xl font-black text-[#800000] tracking-tight whitespace-nowrap">
                 +971 4 294 5001
               </span>
             </a>
