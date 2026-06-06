@@ -31,48 +31,25 @@ const AnimatedIcon = ({
   index?: number;
 }) => {
   const animations: Record<string, any> = {
-    electrical: {
-      rotate: [0, -10, 10, -5, 0],
-      scale: [1, 1.08, 1],
-    },
-
-    plumbing: {
-      y: [0, -6, 0],
-    },
-
-    fan: {
-      rotate: 360,
-    },
-
-    paint: {
-      x: [0, 3, -3, 0],
-    },
-
-    hammer: {
-      rotate: [0, -20, 15, -10, 0],
-    },
-
-    default: {
-      scale: [1, 1.05, 1],
-    },
+    electrical: { rotate: [0, -10, 10, -5, 0], scale: [1, 1.08, 1] },
+    plumbing: { y: [0, -6, 0] },
+    fan: { rotate: 360 },
+    paint: { x: [0, 3, -3, 0] },
+    hammer: { rotate: [0, -20, 15, -10, 0] },
+    default: { scale: [1, 1.05, 1] },
   };
 
   const motionKey = animations[type] || animations.default;
 
   return (
     <motion.div
-      initial="rest"
-      whileInView="animate"
-      whileHover="animate"
-      viewport={{ once: false, amount: 0.6 }}
-      animate={{
-        ...motionKey,
-      }}
+      animate={motionKey}
       transition={{
         repeat: Infinity,
-        duration: 2 + index * 0.2, // 👈 important: each item slightly different speed
+        duration: 2 + index * 0.2,
         ease: "easeInOut",
       }}
+      className="flex justify-center items-center py-6 text-gray-800 group-hover:text-[#800000] transition-colors"
     >
       {children}
     </motion.div>
@@ -125,25 +102,9 @@ export default function HomeServices() {
     },
   ];
 
-  const containerVariants: Variants = {
-    hidden: {},
-    visible: {
-      transition: { staggerChildren: 0.12 },
-    },
-  };
-
-//   const cardVariants: Variants = {
-//     hidden: { opacity: 0, y: 40 },
-//     visible: {
-//       opacity: 1,
-//       y: 0,
-//       transition: { type: "spring", stiffness: 60, damping: 15 },
-//     },
-//   };
-
   return (
     <section className="relative bg-[#f6f2eb] pt-24 pb-28 overflow-hidden">
-      {/* TOP CURVE */}
+      {/* CURVE */}
       <div
         className="absolute top-0 left-0 w-full h-16 bg-white"
         style={{ clipPath: "polygon(0 0, 60% 0, 65% 100%, 0 100%)" }}
@@ -164,27 +125,41 @@ export default function HomeServices() {
         </div>
 
         {/* GRID */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-                    {services.map((service, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => {
             const IconComponent = service.icon;
 
             return (
-                <AnimatedIcon
+              <div
                 key={service.id}
-                type={service.iconType}
-                index={index}
-                >
-                <IconComponent className="w-14 h-14 stroke-[1.25]" />
+                className="bg-white rounded-2xl p-8 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all group"
+              >
+                {/* ID + TITLE */}
+                <div className="flex justify-between items-center mb-8">
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
+                  <span className="text-sm font-mono text-gray-400">
+                    {service.id}
+                  </span>
+                </div>
+
+                {/* ICON */}
+                <AnimatedIcon type={service.iconType} index={index}>
+                  <IconComponent className="w-14 h-14 stroke-[1.25]" />
                 </AnimatedIcon>
+
+                {/* DESC */}
+                <div className="mt-6">
+                  <div className="w-full h-[1px] bg-gray-100 mb-4" />
+                  <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700">
+                    {service.desc}
+                  </p>
+                </div>
+              </div>
             );
-            })}
-        </motion.div>
+          })}
+        </div>
 
         {/* BUTTON */}
         <div className="mt-16 flex justify-center">
