@@ -88,9 +88,12 @@ export default function HomeWorkprocess() {
           <p className="text-gray-600 leading-relaxed max-w-md">
            At Aalizah Vision Technical Services, we follow a clear and efficient process to ensure quality results on every project. From the first call to the final inspection, your satisfaction is our top priority.
           </p>
-          <Button>
-            Get a Free Quote
-          </Button>
+                <Button
+          variant="primary"
+          className="flex items-center justify-center"
+        >
+          Get a Free Quote
+        </Button>
         </div>
       </div>
 

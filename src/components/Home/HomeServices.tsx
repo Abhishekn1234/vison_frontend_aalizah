@@ -10,6 +10,9 @@ import {
   Paintbrush,
   Hammer,
   ArrowRight,
+  Fan,
+  Grid2x2,
+  House
 } from "lucide-react";
 
 interface ServiceItem {
@@ -100,6 +103,27 @@ export default function HomeServices() {
       icon: Hammer,
       iconType: "hammer",
     },
+    {
+      id:"07/",
+      title:"AC Repair",
+      desc:"We provide ac repair customer services...",
+      icon:Fan,
+      iconType:"fan"
+    },
+    {
+      id:"08/",
+      title:"Tile",
+      desc:"We provide tile customer services...",
+      icon:Grid2x2,
+      iconType:"tile"
+    },
+    {
+      id:"09/",
+      title:"Roofing",
+      desc:"We provide roofing customer services...",
+      icon:House,
+      iconType:"roofing"
+    }
   ];
 
   return (
