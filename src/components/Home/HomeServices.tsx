@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "react-router-dom";
-import { motion, type Variants } from "framer-motion";
+import { motion} from "framer-motion";
 import {
   Wrench,
   Zap,
