@@ -3,29 +3,41 @@ import { useEffect, useRef } from 'react';
 import { motion, useMotionValue, useTransform, useInView, animate } from 'framer-motion';
 
 // Reusable Counter Component for running numbers
-function Counter({
-  value,
-//   direction = "up",
-}: {
+interface CounterProps {
   value: number;
-  direction?: "up" | "down";
-}) {
-  const ref = useRef(null);
+}
+
+export function Counter({ value }: CounterProps) {
+  const ref = useRef<HTMLDivElement>(null);
+
   const motionValue = useMotionValue(0);
-  const rounded = useTransform(motionValue, (latest) => Math.round(latest));
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const rounded = useTransform(
+    motionValue,
+    (latest) => Math.round(latest)
+  );
+
+  const isInView = useInView(ref, {
+    once: true,
+    amount: 0.3,
+  });
 
   useEffect(() => {
-    if (isInView) {
-      const controls = animate(motionValue, value, {
-        duration: 2,
-        ease: "easeOut",
-      });
-      return controls.stop;
-    }
+    if (!isInView) return;
+
+    const controls = animate(motionValue, value, {
+      duration: 2,
+      ease: "easeOut",
+    });
+
+    return () => controls.stop();
   }, [isInView, motionValue, value]);
 
-  return <motion.span ref={ref}>{rounded}</motion.span>;
+  return (
+    <div ref={ref}>
+      <motion.span>{rounded}</motion.span>
+    </div>
+  );
 }
 
 export default function HomeWhychooseus() {
