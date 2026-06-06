@@ -57,11 +57,11 @@ export default function HomeWhychooseus() {
       <div 
         className="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-40 pointer-events-none"
         style={{ 
-          backgroundImage: `url('/path-to-your-ac-technician-image.jpg')` 
+          backgroundImage: `url('/why aalizah stand above the rest.png')` 
         }}
       />
       {/* Dark Vignette to match the heavy luxury tone */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/90 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-90 via-slate-900/80 to-slate-950/90 pointer-events-none" />
 
       {/* 2. Top/Middle Content Grid */}
       <div className="relative max-w-7xl mx-auto px-6 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center my-auto">

@@ -10,16 +10,16 @@ export default function HomeHero() {
       <FadeIn>
       {/* 1. Main Background Image (Skyscrapers & Workers) */}
       <div 
-        className="absolute inset-0 bg-cover bg-center md:bg-[right_center]"
+        className="absolute inset-0 bg-cover bg-center md:bg-[right_center] opacity-60"
         style={{ 
-          backgroundImage: `url('/path-to-your-dubai-skyline-image.jpg')` 
+          backgroundImage: `url('/home.jpeg')` 
         }}
       />
 
       {/* 2. Dark Geometric Overlay (Left Side Angle) */}
       {/* Uses a responsive clip-path to match the sharp diagonal cutout */}
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0B1528] to-[#050B14] opacity-95 md:opacity-100"
+        className="absolute inset-0  opacity-75 md:opacity-100"
         style={{
           clipPath: 'polygon(0 0, 100% 0, 65% 100%, 0% 100%)'
         }}
@@ -66,11 +66,11 @@ export default function HomeHero() {
         {/* This matches the floating cut-out preview at the bottom center of the screenshot */}
         <div className="hidden lg:block absolute bottom-0 left-[35%] w-[25rem] h-[15rem] overflow-hidden z-20 shadow-2xl border-t-4 border-l-4 border-slate-950"
              style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)' }}>
-          <img 
-            src="/path-to-your-handyman-image.jpg" 
+          {/* <img 
+            src="/home.jpeg" 
             alt="Maintenance worker close up" 
             className="w-full h-full object-cover"
-          />
+          /> */}
         </div>
 
       </div>
