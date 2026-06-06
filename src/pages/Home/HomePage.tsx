@@ -1,4 +1,5 @@
 import HomeAbout from "../../components/Home/HomeAbout";
+import HomeGetTouch from "../../components/Home/HomeGetTouch";
 import HomeHero from "../../components/Home/HomeHero";
 import Homeourwork from "../../components/Home/Homeourwork";
 import HomeWhychooseus from "../../components/Home/HomeWhychooseus";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <HomeWhychooseus/>
       <Homeourwork/>
       <HomeWorkprocess/>
+      <HomeGetTouch/>
     </div>
   )
 }
