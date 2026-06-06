@@ -24,80 +24,59 @@ interface ServiceItem {
 const AnimatedIcon = ({
   children,
   type,
+  index = 0,
 }: {
   children: React.ReactNode;
   type: string;
+  index?: number;
 }) => {
   const animations: Record<string, any> = {
     electrical: {
-      animate: {
-        rotate: [0, -12, 12, -6, 0],
-        scale: [1, 1.08, 1],
-        transition: {
-          repeat: Infinity,
-          duration: 2,
-          ease: "easeInOut",
-        },
-      },
+      rotate: [0, -10, 10, -5, 0],
+      scale: [1, 1.08, 1],
     },
 
     plumbing: {
-      animate: {
-        y: [0, -5, 0],
-        transition: {
-          repeat: Infinity,
-          duration: 1.4,
-          ease: "easeInOut",
-        },
-      },
+      y: [0, -6, 0],
     },
 
     fan: {
-      animate: {
-        rotate: 360,
-        transition: {
-          repeat: Infinity,
-          duration: 1.2,
-          ease: "linear",
-        },
-      },
+      rotate: 360,
     },
 
     paint: {
-      animate: {
-        x: [0, 3, -3, 0],
-        transition: {
-          repeat: Infinity,
-          duration: 2,
-          ease: "easeInOut",
-        },
-      },
+      x: [0, 3, -3, 0],
     },
 
     hammer: {
-      animate: {
-        rotate: [0, -25, 18, -10, 0],
-        transition: {
-          repeat: Infinity,
-          duration: 1.6,
-          ease: "easeInOut",
-        },
-      },
+      rotate: [0, -20, 15, -10, 0],
     },
 
     default: {
-      animate: {
-        scale: [1, 1.05, 1],
-        transition: {
-          repeat: Infinity,
-          duration: 2,
-          ease: "easeInOut",
-        },
-      },
+      scale: [1, 1.05, 1],
     },
   };
 
-  return <motion.div animate={animations[type]?.animate || animations.default.animate}>{children}</motion.div>;
+  const motionKey = animations[type] || animations.default;
+
+  return (
+    <motion.div
+      initial="rest"
+      whileInView="animate"
+      whileHover="animate"
+      viewport={{ once: false, amount: 0.6 }}
+      animate={{
+        ...motionKey,
+      }}
+      transition={{
+        repeat: Infinity,
+        duration: 2 + index * 0.2, // 👈 important: each item slightly different speed
+        ease: "easeInOut",
+      }}
+    >
+      {children}
+    </motion.div>
+  );
 };
 
 export default function HomeServices() {
@@ -192,44 +171,19 @@ export default function HomeServices() {
           viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {services.map((service) => {
+                    {services.map((service, index) => {
             const IconComponent = service.icon;
 
             return (
-              <motion.div
+                <AnimatedIcon
                 key={service.id}
-                variants={cardVariants}
-                className="bg-white rounded-2xl p-8 shadow-[0_4px_25px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-shadow duration-300 flex flex-col justify-between min-h-[360px] group"
-              >
-                {/* TOP */}
-                <div>
-                  <div className="flex justify-between items-center mb-10">
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {service.title}
-                    </h3>
-                    <span className="text-sm font-mono text-gray-400">
-                      {service.id}
-                    </span>
-                  </div>
-
-                  {/* ICON */}
-                  <div className="flex justify-center py-6 text-gray-800 group-hover:text-[#800000] transition-colors">
-                    <AnimatedIcon type={service.iconType}>
-                      <IconComponent className="w-14 h-14 stroke-[1.25]" />
-                    </AnimatedIcon>
-                  </div>
-                </div>
-
-                {/* DESCRIPTION */}
-                <div>
-                  <div className="w-full h-[1px] bg-gray-100 mb-6" />
-                  <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700">
-                    {service.desc}
-                  </p>
-                </div>
-              </motion.div>
+                type={service.iconType}
+                index={index}
+                >
+                <IconComponent className="w-14 h-14 stroke-[1.25]" />
+                </AnimatedIcon>
             );
-          })}
+            })}
         </motion.div>
 
         {/* BUTTON */}
