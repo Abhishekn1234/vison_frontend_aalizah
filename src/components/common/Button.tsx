@@ -18,23 +18,23 @@ export const Button: React.FC<ButtonProps> = ({
     // Original dark button -> turns green
     primary: `
       bg-[#2E373A] text-white
-      hover:bg-[#1EA665] 
+      hover:bg-[#800000] 
       active:bg-[#800000]
     `,
     // New White button from screenshot -> turns green on hover/click (text turns white)
     secondary: `
       bg-white text-black border border-transparent
-      hover:bg-[#1EA665] hover:text-white
+      hover:bg-[#800000] hover:text-white
       active:bg-[#800000] active:text-white
       shadow-sm
     `,
     none: `
-      bg-white hover:bg-[#1EA665] hover:text-white
+      bg-white hover:bg-[#800000] hover:text-white
       active:bg-[#800000] active:text-white
     `,
     borderless: `
       bg-transparent border-none text-white
-      hover:bg-[#1EA665] hover:text-white
+      hover:bg-[#800000] hover:text-white
       active:bg-[#800000] active:text-white
     `,
     faq:`bg-transparent border-none text-white
