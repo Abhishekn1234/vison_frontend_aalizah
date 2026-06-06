@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Button from "../common/Button";
+import FadeIn from "../common/FadeIn";
 
 export default function HomeGetTouch() {
   const [formData, setFormData] = useState({
@@ -20,8 +21,8 @@ export default function HomeGetTouch() {
 
   return (
     <section className="relative w-full min-h-screen bg-gray-100 flex items-center justify-center py-16 px-4 md:px-8 lg:px-16 overflow-hidden">
-      
-      {/* 🖼️ BACKGROUND IMAGE LAYER */}
+      <FadeIn>
+         {/* 🖼️ BACKGROUND IMAGE LAYER */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/worker-bg.jpg" // Replace with your local worker image path
@@ -47,7 +48,7 @@ export default function HomeGetTouch() {
 
         {/* 📄 RIGHT SIDE: LIGHT GREY CONTACT FORM CARD */}
         <div className="lg:col-span-7 bg-[#f3f4f6] rounded-2xl shadow-2xl p-6 sm:p-10 lg:p-12 max-w-2xl lg:max-w-none mx-auto w-full">
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-8">
+          <p className="text-[#800000] text-sm sm:text-base leading-relaxed mb-8">
             Have a project in mind or need quick assistance? Fill out the form below, 
             and our team will get back to you promptly to discuss your requirements.
           </p>
@@ -169,6 +170,8 @@ export default function HomeGetTouch() {
         </div>
 
       </div>
+      </FadeIn>
+     
     </section>
   );
 }
