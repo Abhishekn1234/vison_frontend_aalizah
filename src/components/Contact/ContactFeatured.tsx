@@ -1,9 +1,9 @@
 import Button from "../common/Button";
 import FadeIn from "../common/FadeIn";
    import { motion } from "framer-motion";
-
+import {useNavigate} from "react-router-dom";
 export default function ContactFeatured() {
-    
+    const navigate=useNavigate();
   return (
     <section className="bg-gray-100 pt-16 pb-12 px-4 text-center">
         <FadeIn>
@@ -60,7 +60,7 @@ export default function ContactFeatured() {
           Your trusted maintenance partner — just a call away.
         </p>
 
-        <Button variant="primary" className="bg-[#800000] hover:bg-emerald-600 text-white font-semibold text-xs tracking-wider uppercase py-3.5 px-6 rounded-md inline-flex items-center gap-2 transition-all">
+        <Button variant="primary" onClick={()=>navigate('/services')} className="bg-[#800000] hover:bg-emerald-600 text-white font-semibold text-xs tracking-wider uppercase py-3.5 px-6 rounded-md inline-flex items-center gap-2 transition-all">
           View All Services 
           
         </Button>
