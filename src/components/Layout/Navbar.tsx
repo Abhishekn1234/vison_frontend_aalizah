@@ -88,7 +88,7 @@ export default function Navbar() {
             to="/about"
             className="block px-5 py-4 hover:bg-gray-100"
           >
-            About Us
+            ABOUT US
           </Link>
 
           <Link
@@ -155,7 +155,7 @@ export default function Navbar() {
                 onClick={() => setAboutOpen(!aboutOpen)}
                 className="flex items-center justify-between px-5 py-4 border-b border-white/10 hover:bg-white/5"
               >
-                <span>About Us</span>
+                <span>ABOUT US</span>
                 <ChevronDown
                   size={18}
                   className={`transition-transform duration-300 ${
