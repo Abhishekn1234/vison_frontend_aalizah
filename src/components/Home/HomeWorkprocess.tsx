@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Button from "../common/Button";
 
-// 1. Fix TypeScript errors by explicitly defining the Step object structure
+// Explicit structure for Step object
 interface WorkStep {
   id: string;
   title: string;
@@ -41,12 +41,11 @@ export default function HomeWorkprocess() {
     },
   ];
 
-  // 2. Container variants orchestrating the dynamic scroll choreography
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2, // Staggers 1 -> 2 -> 3 going down
+        staggerChildren: 0.15,
       },
     },
   };
@@ -54,9 +53,9 @@ export default function HomeWorkprocess() {
   const cardVariants = {
     hidden: { 
       opacity: 0, 
-      x: -140, // Elegant slide-in from the left side
-      y: 40,   
-      scale: 0.92 
+      x: -30, 
+      y: 30,   
+      scale: 0.96
     },
     visible: { 
       opacity: 1, 
@@ -65,66 +64,69 @@ export default function HomeWorkprocess() {
       scale: 1,
       transition: { 
         type: "spring",
-        stiffness: 50,
-        damping: 14,
-        duration: 0.75 
+        stiffness: 60,
+        damping: 15,
+        duration: 0.6
       }
     },
-  } as const;
+  }as const;
 
   return (
-    <section className="relative bg-[#f6f2eb] py-28 overflow-hidden min-h-screen">
+    <section className="relative bg-[#f6f2eb] py-16 sm:py-24 lg:py-28 overflow-hidden min-h-screen">
       
       {/* Background Header Text Wrapper */}
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 mb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 md:mb-16">
         <div>
-          <p className="text-[#800000] font-semibold tracking-wider uppercase text-sm">our work process</p>
-          <h2 className="text-5xl font-black mt-4 leading-tight tracking-tight text-[#1a2424]">
+          <p className="text-[#800000] font-semibold tracking-wider uppercase text-xs sm:text-sm">
+            our work process
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mt-3 sm:mt-4 leading-tight tracking-tight text-[#1a2424]">
             FROM <br />
             START <span className="text-[#800000] font-normal">TO</span> FINISH
           </h2>
         </div>
-       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-  <p className="text-gray-600 leading-relaxed max-w-md">
-    At Aalizah Vision Technical Services, we follow a streamlined
-    process that ensures every project is delivered on time,
-    within budget, and to the highest standards.
-  </p>
+        <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start sm:items-end md:items-start lg:items-end justify-between gap-6">
+          <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-md">
+            At Aalizah Vision Technical Services, we follow a streamlined
+            process that ensures every project is delivered on time,
+            within budget, and to the highest standards.
+          </p>
 
-  <Button
-    variant="primary"
-    className="whitespace-nowrap flex items-center justify-center"
-  >
-    Get a Free Quote
-  </Button>
-</div>
+          <Button
+            variant="primary"
+            className="w-full sm:w-auto whitespace-nowrap flex items-center justify-center py-3 px-6 text-sm"
+          >
+            Get a Free Quote
+          </Button>
+        </div>
       </div>
 
       {/* 🧩 STACKED CARDS WRAPPER */}
-      {/* Replaced manual trigger logic with Framer Motion's native view viewport viewport checker */}
       <motion.div 
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.15 }} // once: false forces recalculation when scrolling back up
-        className="relative mt-12 h-[850px] max-w-5xl mx-auto px-4"
+        viewport={{ once: false, amount: 0.05 }}
+        // Layout: Blocks flex stacked on mobile, Absolute offset paths layout on desktop maps
+        className="relative mt-8 md:mt-12 h-auto md:h-[880px] max-w-5xl mx-auto px-4 flex flex-col gap-6 md:block"
       >
         {steps.map((step: WorkStep, index: number) => {
+          // Dynamic absolute alignment matrix array exclusively assigned to desktop break points
           const positions = [
-            "top-0 left-0 md:left-[5%]",
-            "top-[120px] left-0 md:left-[15%]",
-            "top-[240px] left-0 md:left-[25%]",
+            "md:top-0 md:left-[5%]",
+            "md:top-[160px] md:left-[15%]",
+            "md:top-[320px] md:left-[25%]",
           ];
 
           return (
             <motion.div
               key={step.id}
               variants={cardVariants}
-              className={`absolute ${positions[index]} w-full md:w-[65%] shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[20px] overflow-hidden flex flex-col`}
-              style={{ zIndex: index + 1 }} 
+              className={`relative md:absolute ${positions[index]} w-full md:w-[65%] shadow-xl md:shadow-[0_20px_50px_rgba(0,0,0,0.12)] rounded-2xl overflow-hidden flex flex-col`}
+              style={{ md: { zIndex: index + 1 } } as any} 
             >
               {/* IMAGE HEADER */}
-              <div className="h-44 w-full relative overflow-hidden">
+              <div className="h-36 sm:h-44 w-full relative overflow-hidden shrink-0">
                 <img
                   src={step.img}
                   className="w-full h-full object-cover object-center"
@@ -134,29 +136,29 @@ export default function HomeWorkprocess() {
               </div>
 
               {/* CARD BLOCK MAIN CONTENT */}
-              <div className={`p-8 flex-1 relative ${step.isDark ? 'bg-[#2b3535] text-white' : 'bg-white text-[#2b3535]'}`}>
+              <div className={`p-6 sm:p-8 flex-1 relative ${step.isDark ? 'bg-[#2b3535] text-white' : 'bg-white text-[#2b3535]'}`}>
                 
                 {/* Giant Step Indicator Number */}
-                <div className="flex items-baseline gap-4">
-                  <span className={`text-6xl font-black leading-none tracking-tighter ${step.isDark ? 'text-white/15' : 'text-black/10'}`}>
+                <div className="flex items-baseline gap-3 sm:gap-4">
+                  <span className={`text-4xl sm:text-6xl font-black leading-none tracking-tighter shrink-0 ${step.isDark ? 'text-white/15' : 'text-black/10'}`}>
                     {step.id}
                   </span>
-                  <h4 className="text-lg font-bold uppercase tracking-wide leading-tight">
+                  <h4 className="text-base sm:text-lg font-bold uppercase tracking-wide leading-tight">
                     {step.title}
                   </h4>
                 </div>
 
-                <p className={`mt-4 text-sm leading-relaxed ${step.isDark ? 'text-gray-300' : 'text-gray-600'}`}>
+                <p className={`mt-3 text-xs sm:text-sm leading-relaxed ${step.isDark ? 'text-gray-300' : 'text-gray-600'}`}>
                   {step.desc}
                 </p>
 
-                <div className={`w-full h-[1px] my-6 ${step.isDark ? 'bg-white/10' : 'bg-black/10'}`} />
+                <div className={`w-full h-[1px] my-4 sm:my-6 ${step.isDark ? 'bg-white/10' : 'bg-black/10'}`} />
 
                 {/* Checked Bullet Point Node list */}
-                <ul className="space-y-3.5">
+                <ul className="space-y-2.5 sm:space-y-3.5">
                   {step.bullets.map((bullet: string, idx: number) => (
-                    <li key={idx} className="flex items-start gap-3 text-sm font-medium">
-                      <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#800000] flex items-center justify-center text-white text-xs">
+                    <li key={idx} className="flex items-start gap-2.5 sm:gap-3 text-xs sm:text-sm font-medium">
+                      <span className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#800000] flex items-center justify-center text-white text-[10px] sm:text-xs">
                         ✓
                       </span>
                       <span className={step.isDark ? 'text-gray-200' : 'text-gray-700'}>
