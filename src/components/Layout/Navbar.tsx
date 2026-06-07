@@ -154,7 +154,7 @@ export default function Navbar() {
                 onClick={() => setAboutOpen(!aboutOpen)}
                 className="flex items-center justify-between px-5 py-4 border-b border-white/10 hover:bg-white/5"
               >
-                <span>ABOUT US</span>
+                <span>About Us</span>
 
                 <ChevronDown
                   size={18}
