@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Button from "../common/Button";
-
+import { useNavigate } from "react-router-dom";
 // Explicit structure for Step object
 interface WorkStep {
   id: string;
@@ -14,6 +14,7 @@ interface WorkStep {
 }
 
 export default function HomeWorkprocess() {
+  const navigate=useNavigate();
   const steps: WorkStep[] = [
     {
       id: "01",
@@ -94,6 +95,7 @@ export default function HomeWorkprocess() {
 
           <Button
             variant="primary"
+            onClick={()=>navigate('/contact')}
             className="w-full sm:w-auto whitespace-nowrap flex items-center justify-center py-3 px-6 text-sm"
           >
             Get a Free Quote

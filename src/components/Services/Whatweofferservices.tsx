@@ -12,7 +12,7 @@ export default function Whatweofferservices() {
   });
 
   return (
-    <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-white">
+    <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-gray-100">
       <div
         ref={ref}
         className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center"

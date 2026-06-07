@@ -1,6 +1,7 @@
 import FadeIn from "../common/FadeIn";
 import { Button } from "../common/Button";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
   const [rotation, setRotation] = useState(0);
@@ -24,6 +25,7 @@ export default function Hero() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const navigate=useNavigate();
   return (
     <section className="bg-[#f9f8f6] py-14 md:py-20 lg:py-28 font-sans overflow-hidden select-none">
       <FadeIn>
@@ -132,7 +134,7 @@ export default function Hero() {
                     exceed expectations.
                 </p>
 
-                <Button className="mt-4" variant="primary">
+              <Button onClick={()=>navigate('/services')} className="mt-4" variant="primary">
                   EXPLORE OUR SERVICES
                 </Button>
               </div>

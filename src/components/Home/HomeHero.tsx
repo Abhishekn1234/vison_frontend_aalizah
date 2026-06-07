@@ -55,7 +55,7 @@ export default function HomeHero() {
             </Button>
 
             {/* White Button */}
-            <Button className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-slate-900 font-bold px-8 py-4 rounded-xl transition-all duration-300 text-sm md:text-base tracking-wider uppercase shadow-lg" variant="none">
+            <Button onClick={()=>navigate('/services')} className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-slate-900 font-bold px-8 py-4 rounded-xl transition-all duration-300 text-sm md:text-base tracking-wider uppercase shadow-lg" variant="none">
               Explore Our Services
            
             </Button>

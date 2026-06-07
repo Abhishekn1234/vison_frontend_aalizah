@@ -9,6 +9,7 @@ import {
   
   useMotionValue,
 } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeAbout() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -28,6 +29,7 @@ useEffect(() => {
   margin: "-100px",
 });
 const x = useMotionValue(80);
+const navigate=useNavigate();
 useEffect(() => {
   if (isInView) {
     // Scroll INTO view → right to left
@@ -203,7 +205,7 @@ useEffect(() => {
 
             {/* Contact Button Base Wrapper */}
             <div className="pt-2">
-              <Button className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#232E3A] hover:bg-slate-800 text-white font-bold px-7 py-3.5 md:py-4 rounded-lg transition-colors text-xs md:text-sm tracking-wider uppercase">
+              <Button onClick={()=>navigate('/contact')} className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#232E3A] hover:bg-slate-800 text-white font-bold px-7 py-3.5 md:py-4 rounded-lg transition-colors text-xs md:text-sm tracking-wider uppercase">
                 Contact Our Team
               </Button>
             </div>
