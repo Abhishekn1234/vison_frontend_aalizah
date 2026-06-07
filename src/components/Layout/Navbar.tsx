@@ -31,112 +31,111 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP NAVBAR */}
-      <nav className="relative bg-[#6b5b95] text-white h-20 hidden lg:block">
-  {/* Top Right Curve */}
-  <div
-    className="
-      absolute
-      -top-[80px]
-      right-0
-      w-[420px]
-      h-[120px]
-      bg-[#f1efea]
-      rounded-bl-[100px]
-      z-10
-    "
-  />
+        <nav className="relative bg-[#6b5b95] text-white h-20 hidden lg:block">
+          {/* Top Right Curve */}
+          <div
+            className="
+              absolute
+              -top-[80px]
+              right-0
+              w-[420px]
+              h-[120px]
+              bg-[#f1efea]
+              rounded-bl-[100px]
+              z-10
+            "
+          />
 
-  <div className="max-w-[1500px] mx-auto px-10 h-full relative z-20">
-    {/* Everything aligned left */}
-    <div className="flex items-center gap-12 h-full font-semibold uppercase tracking-wide">
+          <div className="max-w-[1500px] mx-auto px-10 h-full relative z-20">
+            {/* All menu items aligned left */}
+            <div className="flex items-center gap-12 h-full font-semibold uppercase tracking-wide">
+              <Link
+                to="/"
+                className="hover:text-[#A8E6CF] transition-colors duration-300"
+              >
+                Home
+              </Link>
 
-      <Link
-        to="/"
-        className="hover:text-[#A8E6CF] transition-colors duration-300"
-      >
-        Home
-      </Link>
+              {/* ABOUT DROPDOWN */}
+              <div className="relative group">
+                <button className="flex items-center gap-1 hover:text-[#A8E6CF] transition-colors duration-300">
+                  ABOUT US
+                  <ChevronDown size={16} />
+                </button>
 
-      {/* About Dropdown */}
-      <div className="relative group">
-        <button className="flex items-center gap-1 hover:text-[#A8E6CF] transition-colors">
-          About Us
-          <ChevronDown size={16} />
-        </button>
+                <div
+                  className="
+                    absolute
+                    top-full
+                    left-0
+                    mt-3
+                    w-60
+                    bg-white
+                    text-black
+                    rounded-xl
+                    shadow-2xl
+                    opacity-0
+                    invisible
+                    group-hover:opacity-100
+                    group-hover:visible
+                    transition-all
+                    duration-300
+                    overflow-hidden
+                  "
+                >
+                  <Link
+                    to="/about"
+                    className="block px-5 py-4 hover:bg-gray-100"
+                  >
+                    About Us
+                  </Link>
 
-        <div
-          className="
-            absolute
-            top-full
-            left-0
-            mt-3
-            w-60
-            bg-white
-            text-black
-            rounded-xl
-            shadow-2xl
-            opacity-0
-            invisible
-            group-hover:opacity-100
-            group-hover:visible
-            transition-all
-            duration-300
-            overflow-hidden
-          "
-        >
-          <Link
-            to="/about"
-            className="block px-5 py-4 hover:bg-gray-100"
-          >
-            ABOUT US
-          </Link>
+                  <Link
+                    to="/team"
+                    className="block px-5 py-4 hover:bg-gray-100"
+                  >
+                    Join Our Team
+                  </Link>
 
-          <Link
-            to="/team"
-            className="block px-5 py-4 hover:bg-gray-100"
-          >
-            Join Our Team
-          </Link>
+                  <Link
+                    to="/faq"
+                    className="block px-5 py-4 hover:bg-gray-100"
+                  >
+                    FAQ
+                  </Link>
+                </div>
+              </div>
 
-          <Link
-            to="/faq"
-            className="block px-5 py-4 hover:bg-gray-100"
-          >
-            FAQ
-          </Link>
-        </div>
-      </div>
+              <Link
+                to="/services"
+                className="hover:text-[#A8E6CF] transition-colors duration-300"
+              >
+                Services
+              </Link>
 
-      <Link
-        to="/services"
-        className="hover:text-[#A8E6CF] transition-colors"
-      >
-        Services
-      </Link>
+              <Link
+                to="/projects"
+                className="hover:text-[#A8E6CF] transition-colors duration-300"
+              >
+                Projects
+              </Link>
 
-      <Link
-        to="/projects"
-        className="hover:text-[#A8E6CF] transition-colors"
-      >
-        Projects
-      </Link>
+              <Link
+                to="/news"
+                className="hover:text-[#A8E6CF] transition-colors duration-300"
+              >
+                News
+              </Link>
 
-      <Link
-        to="/news"
-        className="hover:text-[#A8E6CF] transition-colors"
-      >
-        News
-      </Link>
-
-      <Link
-        to="/contact"
-        className="hover:text-[#A8E6CF] transition-colors"
-      >
-        Contact
-      </Link>
-    </div>
-  </div>
-</nav>
+              <Link
+                to="/contact"
+                className="hover:text-[#A8E6CF] transition-colors duration-300"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        </nav>
 
         {/* MOBILE MENU */}
         {open && (
@@ -150,12 +149,13 @@ export default function Navbar() {
                 Home
               </Link>
 
-              {/* Mobile About */}
+              {/* MOBILE ABOUT */}
               <button
                 onClick={() => setAboutOpen(!aboutOpen)}
                 className="flex items-center justify-between px-5 py-4 border-b border-white/10 hover:bg-white/5"
               >
                 <span>ABOUT US</span>
+
                 <ChevronDown
                   size={18}
                   className={`transition-transform duration-300 ${
@@ -165,7 +165,7 @@ export default function Navbar() {
               </button>
 
               {aboutOpen && (
-                <div className="bg-[#2e383b]">
+                <div className="bg-[#5c4d82]">
                   <Link
                     to="/about"
                     className="block px-8 py-3 hover:bg-white/5"
