@@ -5,128 +5,125 @@ interface ServiceItem {
   image: string;
   imageType: string;
 }
-export const services:ServiceItem[] = [
+
+export const services: ServiceItem[] = [
   {
     id: "01/",
-    title: "Renovation",
-    desc: "Our renovation services bring new life to your property...",
+    title: "Building Cleaning Services",
+    desc: "Comprehensive and professional building cleaning solutions...",
     image: "/renovation.jpeg",
     imageType: "default",
   },
   {
     id: "02/",
-    title: "Electrical",
-    desc: "From wiring to fixture installation...",
+    title: "Electrical Fittings & Fixture Services",
+    desc: "From wiring to professional electrical fixture installations...",
     image: "/Electrical.jpeg",
     imageType: "electrical",
   },
   {
     id: "03/",
-    title: "Plumbing",
-    desc: "Our plumbing team handles installation...",
+    title: "Plumbing & Sanitary Contracting",
+    desc: "Our plumbing and sanitary team handles installation and contracting...",
     image: "/Plumber service.jpeg",
     imageType: "plumbing",
   },
   {
     id: "04/",
-    title: "Air Conditioning",
-    desc: "We provide full air conditioning services...",
+    title: "Air-Conditioning, Ventilations & Air Filtration Systems Installation & Maintenance",
+    desc: "We provide complete air conditioning, ventilation, and filtration services...",
     image: "/AC repair.jpeg",
     imageType: "fan",
   },
   {
     id: "05/",
-    title: "Painting",
-    desc: "Professional interior and exterior painting...",
+    title: "Painting Contracting",
+    desc: "Professional interior and exterior painting services...",
     image: "/painting.jpeg",
     imageType: "paint",
   },
   {
     id: "06/",
-    title: "Carpentry",
-    desc: "Custom carpentry solutions...",
+    title: "Carpentry & Flooring Contracting",
+    desc: "Custom carpentry and professional flooring solutions...",
     image: "/carpentry.jpeg",
     imageType: "default",
   },
   {
     id: "07/",
-    title: "Concreate repair",
-    desc: "Fast Concreate repair services...",
+    title: "Concrete Repairs",
+    desc: "Fast, durable, and reliable concrete repair services...",
     image: "/concrete repair.jpeg",
     imageType: "fan",
   },
   {
     id: "08/",
-    title: "Tile",
-    desc: "Tile installation and repair...",
+    title: "Floor and Wall Tiling Works",
+    desc: "Premium quality floor and wall tile installation and repair...",
     image: "/tile.jpeg",
     imageType: "default",
   },
   {
     id: "09/",
-    title: "Roofing",
-    desc: "Roof installation and maintenance...",
+    title: "Metal/Steel Roof Installation",
+    desc: "Expert metal and steel roof installation and maintenance...",
     image: "/steel roof.jpeg",
     imageType: "roofing",
-  },{
-   id:"10/",
-   title:"Strengthening",
-   desc:"Best Strengthening services...",
-   image:"/strengthening.jpeg",
-   imageType:"default"
   },
   {
-    id:"11/",
-    title:"Steel Gate",
-    desc:"Best steel gate fixing platform...",
-    image:"/steel gate.jpeg",
-    imageType:"default"
+    id: "10/",
+    title: "Strengthening Solutions",
+    desc: "Advanced structural strengthening services...",
+    image: "/strengthening.jpeg",
+    imageType: "default",
   },
   {
-    id:"12/",
-    title:"Partition",
-    desc:"Best Partition services...",
-    image:"/partition.jpeg",
-    imageType:"default"
+    id: "11/",
+    title: "Steel Gates",
+    desc: "Design, fabrication, and fixing of premium steel gates...",
+    image: "/steel gate.jpeg",
+    imageType: "default",
   },
   {
-    id:"13/",
-    title:"Facility",
-    desc:"Best Facility services...",
-    image:"/facility.jpeg",
-    imageType:"default"
+    id: "12/",
+    title: "Partitions & False Ceilings Contracting",
+    desc: "Expert installation of partitions and false ceilings...",
+    image: "/partition.jpeg",
+    imageType: "default",
   },
   {
-    id:"14/",
-    title:"Cladding",
-    desc:"Best Cladding services...",
-    image:"/Cladding.jpeg",
-    imageType:"default"
-  
+    id: "13/",
+    title: "Facilities Management Services",
+    desc: "Complete and reliable facilities management support...",
+    image: "/facility.jpeg",
+    imageType: "default",
   },
   {
-    id:"15/",
-    title:"Sanitary",
-    desc:"Best Sanitary services...",
-    image:"/sanitary.jpeg",
-    imageType:"default"
-
+    id: "14/",
+    title: "Cladding Works",
+    desc: "Professional wall cladding and structural finishing...",
+    image: "/Cladding.jpeg",
+    imageType: "default",
   },
   {
-    id:"16/",
-    title:"Bollards",
-    desc:"Best Bollards services...",
-    image:"/bollards.jpeg",
-    imageType:"default"
-
+    id: "15/",
+    title: "Sanitary Installation & Piping Repairing",
+    desc: "Reliable sanitary setup and piping repair services...",
+    image: "/sanitary.jpeg",
+    imageType: "default",
   },
   {
-    id:"17/",
-    title:"Shutter door",
-    desc:"Best Shutter door services...",
-    image:"/Shutter door.jpeg",
-    imageType:"default"
-
-  
+    id: "16/",
+    title: "Bollard Installation",
+    desc: "Heavy-duty bollard installation for traffic and security control...",
+    image: "/bollards.jpeg",
+    imageType: "default",
+  },
+  {
+    id: "17/",
+    title: "Automatic Rolling Shutters",
+    desc: "High-quality automatic rolling shutter and door solutions...",
+    image: "/Shutter door.jpeg",
+    imageType: "default",
   }
 ];

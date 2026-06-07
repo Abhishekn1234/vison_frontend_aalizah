@@ -6,13 +6,43 @@ import {
   animate,
   useInView,
   useScroll,
-  useTransform,
+  
+  useMotionValue,
 } from "framer-motion";
 
 export default function HomeAbout() {
   const containerRef = useRef<HTMLDivElement>(null);
   const countRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+const [direction, setDirection] = useState<"up" | "down">("down");
 
+useEffect(() => {
+  let last = 0;
+
+  return scrollY.on("change", (v) => {
+    setDirection(v > last ? "down" : "up");
+    last = v;
+  });
+}, [scrollY]);
+  const isInView = useInView(containerRef, {
+  margin: "-100px",
+});
+const x = useMotionValue(80);
+useEffect(() => {
+  if (isInView) {
+    // Scroll INTO view → right to left
+    animate(x, -80, {
+      duration: 0.3,
+      ease: "easeOut",
+    });
+  } else {
+    // Scroll OUT of view → direction-based behavior
+    animate(x, direction === "down" ? 80 : 80, {
+      duration: 0.6,
+      ease: "easeInOut",
+    });
+  }
+}, [isInView, direction]);
   const [currentCount, setCurrentCount] = useState(0);
 
   const isCountInView = useInView(countRef, {
@@ -24,7 +54,7 @@ export default function HomeAbout() {
     if (!isCountInView) return;
 
     const controls = animate(0, 500, {
-      duration: 2,
+      duration: 1,
       ease: "easeOut",
       onUpdate: (value) => {
         setCurrentCount(Math.floor(value));
@@ -34,17 +64,9 @@ export default function HomeAbout() {
     return () => controls.stop();
   }, [isCountInView]);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
+ 
   // Balanced parallax translation for a smoother feel across viewports
-  const yMovement = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [30, -50]
-  );
+
 
   return (
     <section className="w-full bg-[#f9f8f6] py-16 md:py-24 lg:py-28 font-sans overflow-hidden">
@@ -80,11 +102,11 @@ export default function HomeAbout() {
 
             {/* Handyman Layer - Using robust responsive bounds */}
             <motion.div
-              style={{ y: yMovement }}
+              style={{ x }}
               className="absolute right-[-4%] bottom-[-12%] sm:bottom-[-16%] md:bottom-[-20%] lg:bottom-[-15%] z-10 w-[60%] sm:w-[50%] md:w-[48%] lg:w-[65%] pointer-events-none"
             >
               <img
-                src="/handyman holding drill.png"
+                src="/handyman.PNG"
                 alt="Handyman"
                 className="w-full h-auto object-contain drop-shadow-2xl"
               />
