@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion} from "framer-motion";
 import {
  
@@ -10,6 +10,7 @@ import {
 import { services } from "../common/services";
 
 export default function HomeServices(){
+  const navigate=useNavigate();
   return (
     <section className="relative bg-[#f6f2eb] pt-24 pb-28 overflow-hidden">
       {/* CURVE */}
@@ -95,6 +96,7 @@ export default function HomeServices(){
       initial={{ x: -20, opacity: 0 }}
       whileHover={{ x: 0, opacity: 1 }}
       className="mt-6 flex items-center gap-2 text-white font-semibold"
+      onClick={()=>navigate('/services')}
     >
       Learn More →
     </motion.div>
