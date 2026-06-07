@@ -115,16 +115,21 @@ export default function Hero() {
               {/* Content */}
               <div className="max-w-[420px] space-y-5 text-center lg:text-left">
                 <p className="text-[#4a4a45] text-[15px] md:text-[17px] leading-[1.6]">
-                  Welcome to Aalizah Vision Technical Services, your trusted
-                  partner for reliable, innovative, and high-quality technical
-                  solutions.
+                Welcome to Aalizah Vision Technical Services, your trusted partner
+                  for reliable, innovative, and high-quality technical solutions. We
+                  specialize in delivering professional technical and maintenance
+                  services tailored to residential, commercial, and industrial needs
+                  with a commitment to excellence, safety, and customer satisfaction,
+                  our experienced team ensures every project is completed with
+                  precision and efficiency.
+
                 </p>
 
                 <p className="text-[#4a4a45] text-[15px] md:text-[17px] leading-[1.6]">
-                  We specialize in delivering professional technical and
-                  maintenance services tailored to residential, commercial, and
-                  industrial needs with a commitment to excellence, safety, and
-                  customer satisfaction.
+                  At Aalizah Vision Technical Services, we believe in building longterm relationships through trust, transparency, and exceptional
+                    workmanship. Whether it’s installation, maintenance, repair, or
+                    technical support, we strive to provide solutions that add value and
+                    exceed expectations.
                 </p>
 
                 <Button className="mt-4" variant="primary">

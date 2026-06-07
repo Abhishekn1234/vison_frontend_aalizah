@@ -6,24 +6,25 @@ export default function HeroBanner() {
 
       <FadeIn>
 
-        {/* Background */}
+        {/* Background Image */}
         <img
           src="./about (2).png"
           alt="About Banner"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/55" />
+        {/* Overlay with clip-path */}
+        <div
+          className="absolute inset-0  opacity-75 md:opacity-100"
+          style={{
+            clipPath: "polygon(0 0, 100% 0, 65% 100%, 0% 100%)",
+          }}
+        />
 
         {/* Center Content */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-center">
 
-          {/* Small optional subtitle (you can remove if not needed) */}
-          {/* <p className="text-white/80 text-xs md:text-sm uppercase tracking-[4px] mb-3">
-            Welcome To
-          </p> */}
-
+          {/* Title */}
           <h1 className="
             text-white
             uppercase
@@ -37,7 +38,7 @@ export default function HeroBanner() {
             About
           </h1>
 
-          {/* Breadcrumb Box */}
+          {/* Breadcrumb */}
           <div className="
             mt-5
             flex
@@ -63,23 +64,12 @@ export default function HeroBanner() {
           </div>
 
         </div>
-
-        {/* Bottom White Shape */}
-        <div
-          className="
-            absolute
-            bottom-0
-            left-0
-            h-10
-            md:h-16
-            w-[40%]
-            bg-white
-            rounded-tr-[40px]
-            md:rounded-tr-[70px]
-            z-20
-          "
+            <div
+          className="absolute bottom-0 left-0 right-0 h-14 bg-white hidden md:block z-10"
+          style={{
+            clipPath: "polygon(0 100%, 35% 100%, 38% 0, 0 0)",
+          }}
         />
-
       </FadeIn>
 
     </section>

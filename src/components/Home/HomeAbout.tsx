@@ -147,8 +147,18 @@ useEffect(() => {
                   Our Mission
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed font-normal">
-                  Our mission is to deliver reliable, affordable, and high-standard home maintenance solutions while building lasting relationships with our customers through honesty and excellence.
-                </p>
+                   To provide dependable and cost-effective
+                      technical services.
+                      To maintain the highest standards of
+                      professionalism and safety.
+                      To deliver timely solutions that meet client
+                      expectations.
+                      To continuously improve through innovation,
+                      technology, and skilled expertise.
+                      To build lasting relationships based on trust and
+                      quality service.
+
+                  </p>
               </div>
               
               {/* Our Vision */}
@@ -157,7 +167,10 @@ useEffect(() => {
                   Our Vision
                 </h3>
                 <p className="text-gray-600 text-sm md:text-base leading-relaxed font-normal">
-                  To become Dubai's most trusted home services provider by ensuring quality, safety, and satisfaction in every project we undertake.
+                   To become a leading technical services company
+                    recognized for innovation, quality workmanship, and
+                    customer-focused solutions, while setting new
+                    standards of excellence in the industry.
                 </p>
               </div>
             </div>

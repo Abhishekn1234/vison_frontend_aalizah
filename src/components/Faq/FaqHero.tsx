@@ -14,7 +14,13 @@ export default function FaqHero() {
       />
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      
+      <div
+          className="absolute inset-0 opacity-75 md:opacity-100 z-10"
+          style={{
+            clipPath: "polygon(0 0, 100% 0, 65% 100%, 0% 100%)",
+          }}
+        />
     </div>
 
     {/* Content */}
@@ -38,6 +44,13 @@ export default function FaqHero() {
         </span>
       </div>
     </div>
+      <div
+          className="absolute bottom-0 left-0 right-0 h-14 bg-white hidden md:block z-10"
+          style={{
+            clipPath: "polygon(0 100%, 35% 100%, 38% 0, 0 0)",
+          }}
+        />
+
   </FadeIn>
 </div>
   );

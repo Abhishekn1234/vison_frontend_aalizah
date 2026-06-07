@@ -23,11 +23,16 @@ export default function TeamHero() {
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/55" />
+         <div
+          className="absolute inset-0  opacity-75 md:opacity-100 z-10"
+          style={{
+            clipPath: "polygon(0 0, 100% 0, 65% 100%, 0% 100%)",
+          }}
+        />
+
 
         {/* White angled cut */}
-        <div className="absolute bottom-0 left-0 h-12 md:h-20 w-[45%] bg-white rounded-tr-[40px] md:rounded-tr-[70px] z-20" />
-
+      
         {/* Content */}
         <div className="relative z-30 mt-40 flex flex-col items-center justify-center text-center h-full px-4">
 
@@ -59,7 +64,14 @@ export default function TeamHero() {
           </div>
 
         </div>
+        <div
+          className="absolute bottom-0 left-0 right-0 h-14 bg-white hidden md:block z-10"
+          style={{
+            clipPath: "polygon(0 100%, 35% 100%, 38% 0, 0 0)",
+          }}
+        />
       </FadeIn>
+
     </div>
   );
 }

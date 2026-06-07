@@ -38,14 +38,12 @@ export default function ContactHero() {
       </motion.div>
 
       {/* Bottom Left Curve */}
-      <div
-        className="absolute bottom-0 left-0 bg-gray-100"
-        style={{
-          width: "180px",
-          height: "90px",
-          borderTopRightRadius: "100px",
-        }}
-      />
+       <div
+          className="absolute inset-0  z-10"
+          style={{
+            clipPath: "polygon(0 0, 100% 0, 65% 100%, 0% 100%)",
+          }}
+        />
 
       {/* Optional Small Maroon Accent */}
       <div
@@ -56,6 +54,12 @@ export default function ContactHero() {
           borderTopRightRadius: "20px",
         }}
       />
+      <div
+          className="absolute bottom-0 left-0 right-0 h-14 bg-white hidden md:block z-10"
+          style={{
+            clipPath: "polygon(0 100%, 35% 100%, 38% 0, 0 0)",
+          }}
+        />
     </motion.div>
   );
 }

@@ -1,10 +1,11 @@
 import Button from "../common/Button";
 import FadeIn from "../common/FadeIn";
-
+import {useNavigate} from "react-router-dom";
 
 
 
 export default function HomeHero() {
+  const navigate=useNavigate();
   return (
     <section className="relative w-full min-h-[90vh] bg-slate-900 text-white overflow-hidden flex items-center">
       <FadeIn>
@@ -48,7 +49,7 @@ export default function HomeHero() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
             {/* Green Button */}
-            <Button className="flex items-center justify-center gap-2 bg-[#800000] hover:bg-[#059669] text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 text-sm md:text-base tracking-wider uppercase shadow-lg">
+            <Button onClick={()=>navigate('/contact')} className="flex items-center justify-center gap-2 bg-[#800000] hover:bg-[#059669] text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 text-sm md:text-base tracking-wider uppercase shadow-lg">
               Get A Free Quote 
              
             </Button>
