@@ -79,10 +79,10 @@ export default function OpenPositions() {
 
           {/* Email Link */}
           <Link
-            to="mailto:info@aalizahvision.com" 
+            to="mailto:Hr@aalizahvision.com" 
             className="text-black font-semibold text-lg md:text-xl underline decoration-2 underline-offset-4 hover:text-gray-700 transition-colors mb-8 block"
           >
-            info@aalizahvision.com
+           Hr@aalizahvision.com
           </Link>
 
           {/* Contact Us Button */}

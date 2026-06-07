@@ -33,16 +33,16 @@ export default function HomeHero() {
           
           {/* Tagline */}
           <p className="text-[#800000] font-medium tracking-wide text-sm md:text-base uppercase">
-            reliable maintenance & technical solutions in dubai.
+           Reliable Technical Expertise for Every Property in Dubai.
           </p>
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white font-sans uppercase">
-            Keeping Your <br className="hidden sm:inline" />
-            Home And <br />
-            Business <br />
-            Running <br />
-            Smoothly
+            Your One-Stop <br className="hidden sm:inline" />
+           Solution for <br />
+            Home And<br />
+             Business<br />
+            Maintainance
           </h1>
 
           {/* Action Buttons */}

@@ -23,27 +23,40 @@ export default function HomeGetTouch() {
     <section className="relative w-full min-h-screen bg-gray-100 flex items-center justify-center py-16 px-4 md:px-8 lg:px-16 overflow-hidden">
       <FadeIn>
          {/* 🖼️ BACKGROUND IMAGE LAYER */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/worker-bg.jpg" // Replace with your local worker image path
-          alt="Get in Touch Background"
-          className="w-full h-full object-cover object-center filter brightness-[0.85] md:brightness-100"
-        />
-        {/* Dark overlay for extra readability on smaller screens */}
-        <div className="absolute inset-0 bg-black/30 md:bg-black/10 lg:bg-transparent" />
-      </div>
+    {/* Background Image */}
+<div className="absolute inset-0 z-0">
+  <img
+    src="/por.jpg"
+    alt="Get in Touch Background"
+    className="w-full h-full object-cover scale-105"
+  />
+
+  {/* Premium Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
+</div>
 
       {/* 📦 CONTENT CONTAINER */}
       <div className="relative z-10 max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
         {/* 📢 LEFT SIDE: TEXT HERO */}
         <div className="lg:col-span-5 text-white lg:text-[#1a2424] p-4 lg:p-0">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight uppercase drop-shadow-md lg:drop-shadow-none">
-            GET IN <br />
-            TOUCH <br />
-            WITH <br />
-            OUR TEAM
-          </h2>
+           <h2 className="text-white font-black uppercase leading-[0.9] tracking-tight">
+    <span className="block text-5xl md:text-6xl xl:text-7xl">
+      GET IN
+    </span>
+
+    <span className="block text-5xl md:text-6xl xl:text-7xl text-[#800000]">
+      TOUCH
+    </span>
+
+    <span className="block text-5xl md:text-6xl xl:text-7xl">
+      WITH OUR
+    </span>
+
+    <span className="block text-5xl md:text-6xl xl:text-7xl">
+      TEAM
+    </span>
+  </h2>
         </div>
 
         {/* 📄 RIGHT SIDE: LIGHT GREY CONTACT FORM CARD */}

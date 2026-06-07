@@ -19,7 +19,7 @@ export default function HomeWorkprocess() {
       id: "01",
       title: "INITIAL CONSULTATION & INSPECTION",
       desc: "We start by understanding your needs and inspecting the project site to provide the most efficient plan.",
-      img: "/images/work1.jpg",
+      img: "/5star.jpg",
       isDark: true,
       bullets: ["On-site Evaluation by Our Experts", "Transparent Pricing and Clear Timeline"],
     },
@@ -27,7 +27,7 @@ export default function HomeWorkprocess() {
       id: "02",
       title: "EXECUTION & QUALITY CONTROL",
       desc: "Once approved, our team gets to work executing your vision with premium quality materials and advanced tools.",
-      img: "/images/work2.jpg",
+      img: "/4star.jpg",
       isDark: false,
       bullets: ["Skilled Professionals for Every Stage", "Regular Supervision to Maintain Standards"],
     },
@@ -35,7 +35,7 @@ export default function HomeWorkprocess() {
       id: "03",
       title: "FINAL REVIEW & CLIENT SATISFACTION",
       desc: "After completion, we review every detail to ensure perfection and client satisfaction before project handover.",
-      img: "/images/work3.jpg",
+      img: "/3star.jpg",
       isDark: true,
       bullets: ["Comprehensive Inspection Before Delivery", "Client Feedback and After-Service Support"],
     },
@@ -84,17 +84,20 @@ export default function HomeWorkprocess() {
             START <span className="text-[#800000] font-normal">TO</span> FINISH
           </h2>
         </div>
-        <div className="flex items-end">
-          <p className="text-gray-600 leading-relaxed max-w-md">
-           At Aalizah Vision Technical Services, we follow a clear and efficient process to ensure quality results on every project. From the first call to the final inspection, your satisfaction is our top priority.
-          </p>
-                <Button
-          variant="primary"
-          className="flex items-center justify-center"
-        >
-          Get a Free Quote
-        </Button>
-        </div>
+       <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+  <p className="text-gray-600 leading-relaxed max-w-md">
+    At Aalizah Vision Technical Services, we follow a streamlined
+    process that ensures every project is delivered on time,
+    within budget, and to the highest standards.
+  </p>
+
+  <Button
+    variant="primary"
+    className="whitespace-nowrap flex items-center justify-center"
+  >
+    Get a Free Quote
+  </Button>
+</div>
       </div>
 
       {/* 🧩 STACKED CARDS WRAPPER */}
