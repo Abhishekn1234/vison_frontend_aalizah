@@ -98,11 +98,13 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Phone size={18} />
                 <a
-                  href="tel:+971XXXXXXXXX"
-                  className="hover:text-[#800000] transition-colors duration-300"
-                >
-                  +971 XX XXX XXXX
-                </a>
+  href="https://wa.me/971551084366"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-[#800000] font-bold hover:underline whitespace-nowrap inline-block transition-all duration-300 ml-1"
+>
+  +971-551084366
+</a>
               </div>
 
               <div className="flex items-center gap-3">
@@ -117,7 +119,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <MapPin size={18} />
-                <span>Dubai, UAE</span>
+                <span>Location: office no :458,Al Barsha first Building(373-408) Al  Barsha 1 ,Dubai</span>
               </div>
             </div>
           </div>

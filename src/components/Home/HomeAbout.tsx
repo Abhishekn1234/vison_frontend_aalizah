@@ -108,7 +108,7 @@ useEffect(() => {
               className="absolute right-[-4%] bottom-[-12%] sm:bottom-[-16%] md:bottom-[-20%] lg:bottom-[-15%] z-10 w-[60%] sm:w-[50%] md:w-[48%] lg:w-[65%] pointer-events-none"
             >
               <img
-                src="/handyman.PNG"
+                src="/Home.png"
                 alt="Handyman"
                 className="w-full h-auto object-contain drop-shadow-2xl"
               />
@@ -188,19 +188,25 @@ useEffect(() => {
               </p>
               
               {/* Phone Number Callout Link */}
-              <a 
-                href="tel:+97142945001" 
-                className="flex items-center gap-3 shrink-0 group self-start sm:self-center"
-              >
-                <div className="w-11 h-11 md:w-12 md:h-12 bg-[#232E3A] text-white rounded-full flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
-                  <svg className="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 24 24">
-                    <path d="M21.384 17.791l-3.75-3.437a1.251 1.251 0 0 0-1.743.044l-1.545 1.545c-.443-.24-1.045-.613-1.68-1.248-.634-.634-1.008-1.236-1.247-1.68l1.545-1.545a1.245 1.245 0 0 0 .044-1.743L9.571 4.02a1.25 1.25 0 0 0-1.724-.034l-2.02 1.834c-.818.744-1.157 1.87-.872 2.955.748 2.85 2.801 6.275 6.078 9.552 3.277 3.277 6.702 5.33 9.552 6.078a3.11 3.11 0 0 0 2.955-.872l1.834-2.02a1.25 1.25 0 0 0-.03-.172z"/>
-                  </svg>
-                </div>
-                <span className="text-xl md:text-2xl font-black text-[#800000] tracking-tight whitespace-nowrap">
-                  +971 4 294 5001
-                </span>
-              </a>
+              <a
+  href="https://wa.me/971551084366"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-3 shrink-0 group self-start sm:self-center"
+>
+  <div className="w-11 h-11 md:w-12 md:h-12 bg-green-500 text-white rounded-full flex items-center justify-center transition-transform group-hover:scale-105 shadow-md">
+    <svg
+      className="w-5 h-5 fill-current"
+      viewBox="0 0 24 24"
+    >
+      <path d="M20.52 3.48A11.82 11.82 0 0012.04 0C5.5 0 .18 5.32.18 11.86c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.82 11.82 0 005.64 1.44h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.24-6.15-3.39-8.42zM12.05 21.7a9.84 9.84 0 01-5.01-1.37l-.36-.21-3.8 1 1.01-3.7-.23-.38a9.83 9.83 0 01-1.52-5.18c0-5.45 4.43-9.88 9.89-9.88 2.64 0 5.12 1.03 6.98 2.9a9.82 9.82 0 012.89 6.98c0 5.45-4.44 9.88-9.89 9.88zm5.42-7.42c-.3-.15-1.75-.86-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.48s1.08 2.88 1.23 3.08c.15.2 2.12 3.24 5.13 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.75-.71 2-1.39.25-.69.25-1.28.18-1.4-.08-.12-.28-.2-.58-.35z" />
+    </svg>
+  </div>
+
+  <span className="text-xl md:text-2xl font-black text-[#800000] tracking-tight whitespace-nowrap">
+    +971-551084366
+  </span>
+</a>
             </div>
 
             {/* Contact Button Base Wrapper */}

@@ -70,13 +70,13 @@ export default function ContactFeatured() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Headquarter</h4>
             <p className="font-bold text-gray-900 text-sm md:text-base leading-snug max-w-[200px] mx-auto">
-              Office: 502, Ithraa Tower, Al Garhoud, Dubai UAE
+             Location: office no :458,Al Barsha first Building(373-408) Al  Barsha 1 ,Dubai
             </p>
           </div>
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Give Us a Call</h4>
             <p className="text-[#800000] font-bold text-xl md:text-2xl tracking-wide">
-              +971 4 294 5001
+              +971-551084366
             </p>
           </div>
           <div>

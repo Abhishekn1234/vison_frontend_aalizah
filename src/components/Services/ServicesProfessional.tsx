@@ -68,12 +68,14 @@ export default function ServicesProfessional() {
         <div className="mt-16 text-center border-t border-gray-200/60 pt-10">
           <p className="text-base md:text-lg text-gray-600 font-medium tracking-tight">
             Need help choosing the right service? Call our expert team today at{" "}
-            <a 
-              href="tel:+971555544762" 
-              className="text-[#800000] font-bold hover:underline whitespace-nowrap inline-block transition-all duration-300 ml-1"
-            >
-              +971 55 554 4762
-            </a>
+          <a
+  href="https://wa.me/971551084366"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-[#800000] transition-colors duration-300"
+>
+  +971-551084366
+</a>
           </p>
         </div>
         

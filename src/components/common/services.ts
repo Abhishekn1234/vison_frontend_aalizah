@@ -10,7 +10,7 @@ interface ServiceItem {
 export const services: ServiceItem[] = [
   {
     id: "01/",
-    title: "Building Cleaning Services",
+    title: "Rennovation",
     desc: "Comprehensive and professional building cleaning solutions...",
     description: "We offer comprehensive professional building cleaning services designed to maintain spotless, hygienic, and welcoming environments for commercial, residential, and industrial properties.",
     image: "/renovation.jpeg",
