@@ -1,10 +1,14 @@
 import React from 'react';
 import FadeIn from '../common/FadeIn';
 import { Button } from '../common/Button';
+import { useNavigate } from 'react-router-dom';
 
 export const Bottom: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleContactClick = () => {
     console.log("Contact button clicked!");
+    navigate('/contact');
   };
 
   return (

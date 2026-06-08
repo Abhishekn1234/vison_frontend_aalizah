@@ -2,7 +2,7 @@
 import { MapPin } from 'lucide-react';
 import FadeIn from '../common/FadeIn';
 import Button from '../common/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function OpenPositions() {
@@ -18,6 +18,7 @@ export default function OpenPositions() {
       location: "Dubai, UAE"
     }
   ];
+  const navigate=useNavigate();
 
   return (
     <div className=" px-6 py-16 md:py-24 font-sans">
@@ -86,7 +87,7 @@ export default function OpenPositions() {
           </Link>
 
           {/* Contact Us Button */}
-          <Button variant="primary" className="mt-auto">
+          <Button variant="primary" className="mt-auto" onClick={()=>navigate('/contact')}>
             CONTACT US
           </Button>
           
