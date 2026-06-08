@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/Logo.png" />
 
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google Search Console Verification -->
@@ -13,8 +15,10 @@
       content="PQwrpGSkGjsAReQjnkV98teCnOPeXh8j618HGgNO57M"
     />
 
-    <!-- SEO -->
-    <title>Aalizah Vision | Technical Services & Maintenance Solutions</title>
+    <!-- Primary SEO -->
+    <title>
+      Aalizah Vision | Technical Services & Maintenance Solutions
+    </title>
 
     <meta
       name="description"
@@ -27,7 +31,17 @@
     />
 
     <meta name="author" content="Aalizah Vision" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.aalizahvision.com/" />
+
+    <!-- Sitemap -->
+    <link
+      rel="sitemap"
+      type="application/xml"
+      href="https://www.aalizahvision.com/sitemap.xml"
+    />
 
     <!-- Open Graph -->
     <meta
@@ -42,12 +56,16 @@
 
     <meta property="og:type" content="website" />
 
-    <meta property="og:image" content="/Logo.png" />
-
-   <meta property="og:url" content="https://www.aalizahvision.com" />
-
+    <meta property="og:url" content="https://www.aalizahvision.com/" />
 
     <meta property="og:site_name" content="Aalizah Vision" />
+
+    <meta
+      property="og:image"
+      content="https://www.aalizahvision.com/Logo.png"
+    />
+
+    <meta property="og:image:alt" content="Aalizah Vision Logo" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -62,14 +80,40 @@
       content="Professional technical services and maintenance solutions by Aalizah Vision."
     />
 
-    <meta name="twitter:image" content="/Logo.png" />
+    <meta
+      name="twitter:image"
+      content="https://www.aalizahvision.com/Logo.png"
+    />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.aalizahvision.com" />
+    <!-- Theme -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Optional Geo -->
+    <meta name="geo.region" content="AE" />
+    <meta name="geo.placename" content="Dubai" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Aalizah Vision",
+        "url": "https://www.aalizahvision.com/",
+        "logo": "https://www.aalizahvision.com/Logo.png",
+        "image": "https://www.aalizahvision.com/Logo.png",
+        "description": "Professional technical services, maintenance, plumbing, electrical works, AC servicing, painting and handyman solutions.",
+        "telephone": "+971XXXXXXXXX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AE"
+        }
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
