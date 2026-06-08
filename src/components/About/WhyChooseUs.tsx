@@ -2,6 +2,8 @@ import { Check } from "lucide-react";
 import FadeIn from "../common/FadeIn";
 import Button from "../common/Button";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const points = [
   "Expert Technicians You Can Trust",
@@ -12,6 +14,7 @@ const points = [
 ];
 const AnimatedPoint = ({ item, index }: { item: string; index: number }) => {
   const [visible, setVisible] = useState(false);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,6 +56,7 @@ const AnimatedPoint = ({ item, index }: { item: string; index: number }) => {
   );
 };
 export default function WhyChooseUs() {
+  const navigate=useNavigate();
   return (
     <section className="relative overflow-hidden bg-[#f1efea] py-14 md:py-20 lg:py-28 font-sans select-none">
 
@@ -122,7 +126,7 @@ export default function WhyChooseUs() {
               </div>
 
               <div className="mt-4">
-                <Button className="mt-1" variant="none">
+                <Button className="mt-1" variant="none" onClick={()=>navigate('/services')}>
                   VIEW OUR PROJECTS
                 </Button>
               </div>

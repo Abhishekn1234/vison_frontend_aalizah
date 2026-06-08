@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Logo */}
           <div>
             <img
-              src="/AV Logo.png"
+              src="/Logo.png"
               alt="Aalizah Vision Logo"
               className="w-20 mb-5"
             />

@@ -8,7 +8,7 @@ export default function ServicesHero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80')",
+            "url('/service main.jpg.jpeg')"
         }}
       />
 

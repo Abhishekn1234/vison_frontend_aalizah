@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-gray-600 text-white">
           <Link to="/">
             <img
-              src="/AV Logo.png"
+              src="/Logo.png"
               alt="Logo"
               className="w-24 object-contain"
             />

@@ -18,23 +18,20 @@ export default function Whatweofferservices() {
         className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center"
       >
         {/* LEFT IMAGE CONTAINER */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          // order-2 on mobile pushes image below text, order-1 brings it left on desktop
-          className="w-full h-full flex items-center justify-center order-2 md:order-1"
-        >
-          {/* Overflow-hidden wrapper keeps the image zoom constrained within its borders */}
-          <div className="w-full h-full overflow-hidden rounded-2xl shadow-lg group cursor-pointer">
-            <img
-              src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80"
-              alt="Reliable technical and maintenance services in Dubai"
-              // Added transition-transform and group-hover scaling for a sleek hover effect
-              className="w-full max-h-[350px] sm:max-h-[450px] md:max-h-[550px] object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-            />
-          </div>
-        </motion.div>
+<motion.div
+  initial={{ opacity: 0, x: -40 }}
+  animate={isInView ? { opacity: 1, x: 0 } : {}}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="w-full order-2 md:order-1"
+>
+  <div className="h-[350px] sm:h-[450px] md:h-[550px] overflow-hidden rounded-2xl shadow-lg group cursor-pointer">
+    <img
+      src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80"
+      alt="Reliable technical and maintenance services in Dubai"
+      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+    />
+  </div>
+</motion.div>
 
         {/* RIGHT CONTENT CONTAINER */}
         <motion.div

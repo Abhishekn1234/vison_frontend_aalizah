@@ -10,7 +10,7 @@ interface ServiceItem {
 export const services: ServiceItem[] = [
   {
     id: "01/",
-    title: "Rennovation",
+    title: "Renovation",
     desc: "Comprehensive and professional building cleaning solutions...",
     description: "We offer comprehensive professional building cleaning services designed to maintain spotless, hygienic, and welcoming environments for commercial, residential, and industrial properties.",
     image: "/renovation.jpeg",
@@ -149,7 +149,7 @@ export const services: ServiceItem[] = [
     title: "Crack Injection ( Wet & Dry )",
     desc: "Specialized high-pressure injection solutions for repairing concrete cracks and leaks...",
     description: "We provide professional crack injection services for both wet and dry conditions, utilizing advanced resins to effectively seal cracks, stop leaks, and restore structural integrity.",
-    image: "/crack-injection.jpeg",
+    image: "/crack injection.jpg.jpeg",
     imageType: "default",
   },
   {
@@ -157,7 +157,7 @@ export const services: ServiceItem[] = [
     title: "Automatic Garage Doors",
     desc: "Premium, reliable, and smooth-operating automated garage doors for homes and businesses...",
     description: "We supply and install premium automatic garage doors, offering convenience, enhanced security, and modern aesthetics for residential and commercial properties.",
-    image: "/garage-door.jpeg",
+    image: "/auto garage.jpg.jpeg",
     imageType: "default",
   },
   {
@@ -165,7 +165,7 @@ export const services: ServiceItem[] = [
     title: "Long Range Card Readers",
     desc: "Advanced access control systems offering high-performance long-range detection...",
     description: "We supply and install advanced long-range card readers, providing secure, efficient, and hands-free access control solutions for parking systems, gated communities, and corporate facilities.",
-    image: "/card-reader.jpeg",
+    image: "/emote.jpg.jpeg",
     imageType: "default",
   },
   {
@@ -173,7 +173,7 @@ export const services: ServiceItem[] = [
     title: "Gate Automations",
     desc: "Smart and seamless gate automation solutions for residential and industrial complexes...",
     description: "We specialize in gate automation systems, transforming manual gates into smart, secure, and smoothly operated automated access points for residential, commercial, and industrial properties.",
-    image: "/gate-automation.jpeg",
+    image: "/gate automation.jpg.jpeg",
     imageType: "default",
   },
   {
@@ -181,7 +181,7 @@ export const services: ServiceItem[] = [
     title: "Steel Fences",
     desc: "Durable and secure heavy-duty steel fencing fabrication and setup...",
     description: "We design, fabricate, and install high-quality steel fences, providing durable, secure, and visually appealing perimeter protection for residential, commercial, and industrial properties.",
-    image: "/steel-fence.jpeg",
+    image: "/steel fenses.jpg.jpeg",
     imageType: "default",
   },
   {
@@ -189,7 +189,7 @@ export const services: ServiceItem[] = [
     title: "Handrail Installation",
     desc: "Professional custom handrail systems designed for ultimate safety and aesthetics...",
     description: "We provide professional handrail installation services, offering high-quality, durable, and stylish handrail systems that enhance safety and aesthetics in residential, commercial, and public spaces.",
-    image: "/handrail.jpeg",
+    image: "/hand rail.jpg.jpeg",
     imageType: "default",
   }
 ];

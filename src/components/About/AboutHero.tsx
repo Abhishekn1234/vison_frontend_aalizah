@@ -106,7 +106,7 @@ export default function Hero() {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full bg-white shadow-xl flex items-center justify-center">
           <img
-            src="./AV Logo.png"
+            src="./Logo.png"
             alt="Aalizah Vision Technical Services"
             className="w-[130px] md:w-[160px] object-contain"
           />

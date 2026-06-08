@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Button from "../common/Button";
 import FadeIn from "../common/FadeIn";
 import { services } from "../common/services";
+import { toast } from "react-toastify";
 export default function HomeGetTouch() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -14,10 +15,40 @@ export default function HomeGetTouch() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-  };
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  console.log("Form Submitted:", formData);
+
+  try {
+    const res = await fetch("https://formspree.io/f/mqeoqgok", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      toast.success("Message sent successfully!");
+      
+      // optional: clear form
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        address: "",
+        serviceType: "",
+        message: "",
+      });
+    } else {
+      toast.error("Failed to send message. Try again.");
+    }
+  } catch (error) {
+    toast.error("Something went wrong!");
+  }
+};
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-8 lg:px-16 overflow-hidden">

@@ -7,7 +7,7 @@ const reasons = [
     description:
       "Every service we provide meets the highest standards of quality, ensuring lasting results that speak for themselves.",
     image:
-      "https://plus.unsplash.com/premium_photo-1661601269411-9fbd599988ff?q=80&w=600&auto=format&fit=crop", // Link to Woman/Plumber Image
+      "/quality.jpg.jpeg", // Link to Woman/Plumber Image
   },
   {
     id: "02",
@@ -15,7 +15,7 @@ const reasons = [
     description:
       "Our experienced technicians are trained to handle all kinds of maintenance, installation, and repair tasks safely and efficiently.",
     image:
-      "https://plus.unsplash.com/premium_photo-1683141151608-20d046f4044b?q=80&w=600&auto=format&fit=crop", // Link to Tech/Clipboard Image
+      "/skilled labors.jpg.jpeg"
   },
   {
     id: "03",
@@ -23,7 +23,7 @@ const reasons = [
     description:
       "We respect your time — that's why we arrive on schedule and complete every job quickly without compromising quality.",
     image:
-      "https://plus.unsplash.com/premium_photo-1661306536966-d3065c697858?q=80&w=600&auto=format&fit=crop", // Link to Handshake Image
+      "/fast.jpg.jpeg", // Link to Handshake Image
   },
 ];
 
