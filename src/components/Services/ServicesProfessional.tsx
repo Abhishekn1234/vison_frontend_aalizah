@@ -45,7 +45,7 @@ export default function ServicesProfessional() {
         {/* Header Section */}
         <div className="mb-12 md:mb-16 max-w-2xl">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-2 bg-[#2d7d46] rounded-sm transform -skew-x-12"></span>
+            <span className="w-5 h-2 bg-[#800000] rounded-sm transform -skew-x-12"></span>
             <p className="text-sm font-semibold tracking-wide text-[#800000] uppercase">
               comprehensive solutions
             </p>
