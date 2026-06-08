@@ -57,12 +57,12 @@ export default function HomeHero() {
           </div>
 
           {/* Decorative Angled Box */}
-          <div
+          {/* <div
             className="hidden lg:block absolute bottom-0 left-[35%] w-[25rem] h-[15rem] overflow-hidden z-20 shadow-2xl border-t-4 border-l-4 border-slate-950 pointer-events-none"
             style={{
               clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)",
             }}
-          />
+          /> */}
         </div>
 
         {/* Bottom Shape */}
