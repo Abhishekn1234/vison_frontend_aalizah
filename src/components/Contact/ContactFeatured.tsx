@@ -70,7 +70,7 @@ export default function ContactFeatured() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Headquarter</h4>
             <p className="font-bold text-gray-900 text-sm md:text-base leading-snug max-w-[200px] mx-auto">
-             Location: office no :458,Al Barsha first Building(373-408) Al  Barsha 1 ,Dubai
+             office no :458,Al Barsha first Building(373-408) Al  Barsha 1 ,Dubai
             </p>
           </div>
           <div>

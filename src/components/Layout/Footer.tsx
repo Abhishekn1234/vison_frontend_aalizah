@@ -119,7 +119,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <MapPin size={18} />
-                <span>Location: office no :458,Al Barsha first Building(373-408) Al  Barsha 1 ,Dubai</span>
+                <span>office no :458,Al Barsha first Building(373-408) Al  Barsha 1 ,Dubai</span>
               </div>
             </div>
           </div>
