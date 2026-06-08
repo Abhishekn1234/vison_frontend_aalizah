@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP NAVBAR */}
-        <nav className="relative bg-[#6b5b95] text-white h-20 hidden lg:block">
+        <nav className="relative bg-gray-600 text-white h-20 hidden lg:block">
           {/* Top Right Curve */}
           <div
             className="
