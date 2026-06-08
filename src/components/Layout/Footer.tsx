@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import {
   Phone,
   Mail,
   MapPin,
 } from "lucide-react";
+import { services } from "../common/services";
 
 export default function Footer() {
   return (
@@ -11,22 +13,18 @@ export default function Footer() {
       className="bg-[#e9e5df] border-t border-[#d8d2c8]"
     >
       <div className="max-w-[1500px] mx-auto px-5 md:px-10 py-20">
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-
           {/* Logo */}
           <div>
             <img
-              src="./AV Logo.png"
-              alt="logo"
+              src="/AV Logo.png"
+              alt="Aalizah Vision Logo"
               className="w-20 mb-5"
             />
 
             <p className="text-[#555] leading-relaxed">
-              Professional maintenance and
-              technical solutions designed to
-              deliver quality, reliability and
-              long-term value.
+              Professional maintenance and technical solutions designed to
+              deliver quality, reliability and long-term value.
             </p>
           </div>
 
@@ -38,19 +36,39 @@ export default function Footer() {
 
             <ul className="space-y-3 text-[#555]">
               <li>
-                <a href="#about">About Us</a>
+                <Link
+                  to="/"
+                  className="hover:text-[#800000] transition-colors duration-300"
+                >
+                  Home
+                </Link>
               </li>
 
               <li>
-                <a href="#team">Team</a>
+                <Link
+                  to="/about"
+                  className="hover:text-[#800000] transition-colors duration-300"
+                >
+                  About Us
+                </Link>
               </li>
 
               <li>
-                <a href="#faq">FAQ</a>
+                <Link
+                  to="/services"
+                  className="hover:text-[#800000] transition-colors duration-300"
+                >
+                  Services
+                </Link>
               </li>
 
               <li>
-                <a href="#contact">Contact</a>
+                <Link
+                  to="/contact"
+                  className="hover:text-[#800000] transition-colors duration-300"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -62,10 +80,11 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-3 text-[#555]">
-              <li>Technical Maintenance</li>
-              <li>Electrical Works</li>
-              <li>HVAC Services</li>
-              <li>Facility Management</li>
+             {services.map((service, index) => (
+              <li key={index}>
+                {service.title}
+              </li>
+             ))}
             </ul>
           </div>
 
@@ -76,32 +95,37 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-4 text-[#555]">
-
               <div className="flex items-center gap-3">
                 <Phone size={18} />
-                <span>+971 XX XXX XXXX</span>
+                <a
+                  href="tel:+971XXXXXXXXX"
+                  className="hover:text-[#800000] transition-colors duration-300"
+                >
+                  +971 XX XXX XXXX
+                </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail size={18} />
-                <span>info@company.com</span>
+                <a
+                  href="mailto:info@aalizahvision.com"
+                  className="hover:text-[#800000] transition-colors duration-300"
+                >
+                  info@aalizahvision.com
+                </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <MapPin size={18} />
                 <span>Dubai, UAE</span>
               </div>
-
             </div>
           </div>
-
         </div>
 
         <div className="border-t border-[#d8d2c8] mt-12 pt-6 text-center text-[#666]">
-          © 2026 Aalizah Vision Technical Services.
-          All Rights Reserved.
+          © 2026 Aalizah Vision Technical Services. All Rights Reserved.
         </div>
-
       </div>
     </footer>
   );
