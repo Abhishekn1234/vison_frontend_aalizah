@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="top-0 z-50">
       <FadeIn>
         {/* MOBILE HEADER */}
-        <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-[#6b5b95] text-white">
+        <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-gray-600 text-white">
           <Link to="/">
             <img
               src="/AV Logo.png"
@@ -113,7 +113,7 @@ export default function Navbar() {
                 Services
               </Link>
 
-              <Link
+              {/* <Link
                 to="/projects"
                 className="hover:text-[#A8E6CF] transition-colors duration-300"
               >
@@ -125,7 +125,7 @@ export default function Navbar() {
                 className="hover:text-[#A8E6CF] transition-colors duration-300"
               >
                 News
-              </Link>
+              </Link> */}
 
               <Link
                 to="/contact"
@@ -139,7 +139,7 @@ export default function Navbar() {
 
         {/* MOBILE MENU */}
         {open && (
-          <div className="lg:hidden bg-[#6b5b95] text-white shadow-lg">
+          <div className="lg:hidden bg-gray-600 text-white shadow-lg">
             <div className="flex flex-col">
               <Link
                 to="/"
@@ -208,7 +208,7 @@ export default function Navbar() {
               >
                 Services
               </Link>
-
+{/* 
               <Link
                 to="/projects"
                 className="px-5 py-4 border-b border-white/10 hover:bg-white/5"
@@ -223,7 +223,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
               >
                 News
-              </Link>
+              </Link> */}
 
               <Link
                 to="/contact"

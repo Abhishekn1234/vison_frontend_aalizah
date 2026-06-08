@@ -82,7 +82,7 @@ export default function ContactFeatured() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">Email Us</h4>
             <p className="font-bold text-gray-900 text-sm md:text-base break-all max-w-[240px] mx-auto">
-              info@aalizahvision
+              info@aalizahvision.com
             </p>
           </div>
         </div>
