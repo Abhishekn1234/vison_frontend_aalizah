@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="top-0 z-50">
       <FadeIn>
         {/* MOBILE HEADER */}
-        <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-white text-black">
+        <div className="lg:hidden flex items-center justify-between px-5 py-4 text-black">
           <Link to="/">
             <img
               src="/Logo.png"
