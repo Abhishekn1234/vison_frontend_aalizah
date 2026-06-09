@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="top-0 z-50">
       <FadeIn>
         {/* MOBILE HEADER */}
-        <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-gray-600 text-white">
+        <div className="lg:hidden flex items-center justify-between px-5 py-4 bg-white text-black">
           <Link to="/">
             <img
               src="/Logo.png"
@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP NAVBAR */}
-        <nav className="relative bg-gray-600 text-white h-20 hidden lg:block">
+        <nav className="relative bg-white text-black h-20 hidden lg:block">
           {/* Top Right Curve */}
           <div
             className="
@@ -139,7 +139,7 @@ export default function Navbar() {
 
         {/* MOBILE MENU */}
         {open && (
-          <div className="lg:hidden bg-gray-600 text-white shadow-lg">
+          <div className="lg:hidden bg-white text-black shadow-lg">
             <div className="flex flex-col">
               <Link
                 to="/"
