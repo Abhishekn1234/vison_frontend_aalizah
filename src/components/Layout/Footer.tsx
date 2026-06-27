@@ -80,12 +80,17 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-3 text-[#555]">
-             {services.map((service, index) => (
+            {services.map((service, index) => (
               <li key={index}>
-                {service.title}
+                <Link
+                  to="/services"
+                  className="hover:text-[#800000] transition-colors duration-300"
+                >
+                  {service.title}
+                </Link>
               </li>
-             ))}
-            </ul>
+            ))}
+          </ul>
           </div>
 
           {/* Contact */}
