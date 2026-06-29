@@ -39,43 +39,45 @@ export default function Hero() {
           </div>
 
           {/* Main Grid */}
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
-            {/* LEFT */}
-            <div className="space-y-10">
-              <h1 className="uppercase tracking-[-0.03em] leading-[0.95] text-left">
-                <span className="block text-[#800000] font-semibold text-[32px] sm:text-[45px] md:text-[60px] lg:text-[72px] xl:text-[86px]">
-                  DELIVERING RELIABLE
-                </span>
+         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+  {/* LEFT */}
+  <div className="flex flex-col justify-center">
+    <h1 className="uppercase tracking-[-0.03em] leading-[0.95] text-center lg:text-left">
+      <span className="block text-[#800000] font-semibold text-[34px] sm:text-[48px] md:text-[62px] lg:text-[72px] xl:text-[86px]">
+        DELIVERING RELIABLE
+      </span>
 
-                <span className="block text-[#800000] font-semibold text-[32px] sm:text-[45px] md:text-[60px] lg:text-[72px] xl:text-[86px]">
-                  MAINTENANCE WITH
-                </span>
+      <span className="block text-[#800000] font-semibold text-[34px] sm:text-[48px] md:text-[62px] lg:text-[72px] xl:text-[86px]">
+        MAINTENANCE WITH
+      </span>
 
-                <span className="block text-black font-semibold text-[32px] sm:text-[45px] md:text-[60px] lg:text-[72px] xl:text-[86px] mt-1">
-                  UNMATCHED QUALITY
-                </span>
-              </h1>
-              <img
-              src="/About us team.png"
-              alt="Technical Services"
-              className="w-98 h-40 md:w-72 md:h-28 lg:w-[720px] lg:h-[420px] object-cover "
-            />
-            </div>
+      <span className="block text-black font-semibold text-[34px] sm:text-[48px] md:text-[62px] lg:text-[72px] xl:text-[86px] mt-2">
+        UNMATCHED QUALITY
+      </span>
+    </h1>
 
-            {/* RIGHT */}
-            <div className="flex flex-col items-center lg:items-start gap-10">
-              {/* Rotating Logo Circle */}
-              <div 
+    {/*
+    <img
+      src="/About us team.png"
+      alt="Technical Services"
+      className="w-full max-w-[720px] mt-10 rounded-3xl object-cover"
+    />
+    */}
+  </div>
+
+  {/* RIGHT */}
+  <div className="flex flex-col items-center lg:items-start">
+    {/* Rotating Logo */}
+    <div
       ref={containerRef}
-      className="relative w-[280px] h-[280px] md:w-[360px] md:h-[360px]"
+      className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px]"
     >
-      {/* SVG Text Wrapper */}
       <svg
         viewBox="0 0 400 400"
-        className="absolute inset-0 w-full h-full will-change-transform"
+        className="absolute inset-0 w-full h-full"
         style={{
           transform: `rotate(${rotation}deg)`,
-          transition: "transform 0.1s ease-out" // Keeps the rotation smooth
+          transition: "transform .1s linear",
         }}
       >
         <defs>
@@ -96,65 +98,63 @@ export default function Hero() {
           fontWeight="700"
           letterSpacing="4"
         >
-          <textPath href="#circlePath" startOffset="0%">
-            AALIZAH VISION TECHNICAL SERVICES 
+          <textPath href="#circlePath">
+            AALIZAH VISION TECHNICAL SERVICES •
           </textPath>
         </text>
       </svg>
 
-      {/* Center Logo (Stays static/does not rotate) */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full bg-white shadow-xl flex items-center justify-center">
+        <div className="w-[170px] h-[170px] md:w-[220px] md:h-[220px] rounded-full bg-white shadow-2xl border border-gray-100 flex items-center justify-center">
           <img
-            src="./Logo.png"
+            src="/Logo.png"
             alt="Aalizah Vision Technical Services"
-            className="w-[130px] md:w-[160px] object-contain"
+            className="w-[120px] md:w-[155px] object-contain"
           />
         </div>
       </div>
     </div>
 
-              {/* Content */}
-              <div className="max-w-[420px] space-y-5 text-center lg:text-left">
-                <p className="text-[#4a4a45] text-[15px] md:text-[17px] leading-[1.6]">
-                Welcome to Aalizah Vision Technical Services, your trusted partner
-                  for reliable, innovative, and high-quality technical solutions. We
-                  specialize in delivering professional technical and maintenance
-                  services tailored to residential, commercial, and industrial needs
-                  with a commitment to excellence, safety, and customer satisfaction,
-                  our experienced team ensures every project is completed with
-                  precision and efficiency.
+    {/* Content */}
+    <div className="max-w-[500px] mt-10 space-y-6 text-center lg:text-left">
+      <p className="text-[#4a4a45] text-[15px] md:text-[17px] leading-8">
+        Welcome to <strong>Aalizah Vision Technical Services</strong>, your
+        trusted partner for reliable, innovative, and high-quality technical
+        solutions. We specialize in delivering professional technical and
+        maintenance services tailored to residential, commercial, and
+        industrial needs with a commitment to excellence, safety, and customer
+        satisfaction.
+      </p>
 
-                </p>
+      <p className="text-[#4a4a45] text-[15px] md:text-[17px] leading-8">
+        We believe in building long-term relationships through trust,
+        transparency, and exceptional workmanship. Whether it's installation,
+        maintenance, repair, or technical support, we provide dependable
+        solutions that add value and exceed expectations.
+      </p>
 
-                <p className="text-[#4a4a45] text-[15px] md:text-[17px] leading-[1.6]">
-                  At Aalizah Vision Technical Services, we believe in building longterm relationships through trust, transparency, and exceptional
-                    workmanship. Whether it’s installation, maintenance, repair, or
-                    technical support, we strive to provide solutions that add value and
-                    exceed expectations.
-                </p>
-
-             <Link
-  to="/services"
-  className="
-    mt-4 inline-flex items-center justify-center
-    bg-[#800000]
-    text-white
-    px-8 py-4
-    rounded-xl
-    font-bold
-    uppercase
-    tracking-wider
-    shadow-lg
-    hover:bg-[#650000]
-    transition-all duration-300
-  "
->
-  Explore Our Services
-</Link>
-              </div>
-            </div>
-          </div>
+      <Link
+        to="/services"
+        className="
+          inline-flex items-center justify-center
+          rounded-xl
+          bg-[#800000]
+          px-8 py-4
+          text-white
+          font-semibold
+          uppercase
+          tracking-wider
+          shadow-lg
+          transition-all duration-300
+          hover:bg-[#650000]
+          hover:-translate-y-1
+        "
+      >
+        Explore Our Services
+      </Link>
+    </div>
+  </div>
+</div>
         </div>
       </FadeIn>
     </section>
